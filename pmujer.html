@@ -78,6 +78,60 @@
   <p class="card-text">Descubre los perfumes alternativos para Mujer de Parfums en Karoussis Parfums. Fragancias de alta calidad, inspiradas en aromas icónicos, frescas e ideales para el día a día.</p>
 </div>
 
+  <br>
+
+<div class="search-box position-relative" style="max-width:800px; margin:auto;">
+  <input id="searchInput" 
+         class="form-control shadow-sm px-4 py-3" 
+         type="search" 
+         placeholder="Buscar perfumes..." 
+         aria-label="Buscar"
+         style="font-size: 1.2rem; border-radius: 12px;">
+
+  <!-- Dropdown con resultados tipo tarjeta -->
+  <div id="searchList" 
+       class="dropdown-menu w-100 p-2 shadow-lg" 
+       style="display:none; max-height:400px; overflow-y:auto; border-radius: 12px;">
+  </div>
+</div>
+
+<script>
+const searchInput = document.getElementById("searchInput");
+
+searchInput.addEventListener("keyup", function() {
+  let filter = searchInput.value.toLowerCase();
+  let cards = Array.from(document.querySelectorAll(".card"));
+  let parentRow = document.querySelector(".row"); // contenedor principal de productos
+
+  if (filter === "") {
+    // Restaurar visibilidad original
+    cards.forEach(card => card.style.display = "");
+    return;
+  }
+
+  // Filtrar coincidencias
+  let matches = cards.filter(card => card.innerText.toLowerCase().includes(filter));
+
+  // Ordenar alfabéticamente por título
+  matches.sort((a, b) => {
+    let titleA = a.querySelector(".card-title").innerText.toLowerCase();
+    let titleB = b.querySelector(".card-title").innerText.toLowerCase();
+    return titleA.localeCompare(titleB);
+  });
+
+  // Ocultar todas
+  cards.forEach(card => card.style.display = "none");
+
+  // Mostrar coincidencias y reordenarlas al inicio
+  matches.forEach(card => {
+    card.style.display = "";
+    parentRow.insertBefore(card.parentElement, parentRow.firstChild);
+  });
+});
+
+
+</script>
+
 <!--COLUMNA 1 -->
 
 <div class="container mt-3 pt-3">
