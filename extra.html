@@ -98,59 +98,60 @@
 <script>
 const searchInput = document.getElementById("searchInput");
 const parentRow = document.querySelector(".row");
+const cards = Array.from(document.querySelectorAll(".card"));
 
-function restoreOriginalOrder() {
-  const children = Array.from(parentRow.children);
-  children.sort((a, b) => {
-    return parseInt(a.dataset.order, 10) - parseInt(b.dataset.order, 10);
-  });
-  parentRow.innerHTML = "";
-  children.forEach(ch => parentRow.appendChild(ch));
+// 🔹 Función para extraer el número de "Parfums Hxx"
+function getParfumNumber(card) {
+  let title = card.querySelector(".card-title").innerText;
+  let match = title.match(/E(\d+)/i);
+  return match ? parseInt(match[1], 10) : 9999; // si no hay número, lo manda al final
 }
 
-searchInput.addEventListener("keyup", function(e) {
+// 🔹 Tu código actual (queda intacto)
+searchInput.addEventListener("keyup", function() {
   let filter = searchInput.value.toLowerCase();
   let cards = Array.from(document.querySelectorAll(".card"));
+  let parentRow = document.querySelector(".row"); // contenedor principal de productos
 
   if (filter === "") {
+    // Restaurar visibilidad original
     cards.forEach(card => card.style.display = "");
-    restoreOriginalOrder();
+    // 🔹 Agregado: ordenar por número Hxx y reconstruir
+    let sorted = cards.sort((a, b) => getParfumNumber(a) - getParfumNumber(b));
+    parentRow.innerHTML = "";
+    sorted.forEach(card => parentRow.appendChild(card.parentElement));
     return;
   }
 
+  // Filtrar coincidencias
   let matches = cards.filter(card => card.innerText.toLowerCase().includes(filter));
 
+  // Ordenar alfabéticamente por título
   matches.sort((a, b) => {
     let titleA = a.querySelector(".card-title").innerText.toLowerCase();
     let titleB = b.querySelector(".card-title").innerText.toLowerCase();
     return titleA.localeCompare(titleB);
   });
 
+  // Ocultar todas
   cards.forEach(card => card.style.display = "none");
 
+  // Mostrar coincidencias y reordenarlas al inicio
   matches.forEach(card => {
     card.style.display = "";
     parentRow.insertBefore(card.parentElement, parentRow.firstChild);
   });
 });
 
+// 🔹 EXTRA: escuchar el evento "input" (cuando borras con la X)
 searchInput.addEventListener("input", function() {
   if (searchInput.value === "") {
-    restoreOriginalOrder();
-  }
-});
-
-document.addEventListener("keydown", function(e) {
-  if (e.key === "Escape") {
-    searchInput.value = "";
-    restoreOriginalOrder();
+    let sorted = cards.sort((a, b) => getParfumNumber(a) - getParfumNumber(b));
+    parentRow.innerHTML = "";
+    sorted.forEach(card => parentRow.appendChild(card.parentElement));
   }
 });
 </script>
-
-
-
-
 
 <!--COLUMNA 1 -->
 
@@ -160,9 +161,9 @@ document.addEventListener("keydown", function(e) {
     <!-- Producto 1 -->
     <div class="col-md-3 mb-4" data-order="1">
       <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume1Modal">
-        <img src="img/extra/b59/b59100ml.webp" class="card-img-top" alt="B-059">
+        <img src="img/extra/b59/b59100ml.webp" class="card-img-top" alt="Parfums E01">
         <div class="card-body">
-          <h5 class="card-title">B-059</h5>
+          <h5 class="card-title">Parfums E01</h5>
           <p class="text-danger fw-bold">$5.500</p>
           <p class="card-text">B-059 LAVIT CARNAV.59 ROSADO.</p>
         </div>
@@ -172,9 +173,9 @@ document.addEventListener("keydown", function(e) {
     <!-- Producto 2 -->
     <div class="col-md-3 mb-4" data-order="2">
       <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume2Modal">
-        <img src="img/extra/b62/b62100ml.webp" class="card-img-top" alt="PB-062">
+        <img src="img/extra/b62/b62100ml.webp" class="card-img-top" alt="Parfums E02">
         <div class="card-body">
-          <h5 class="card-title">B-062</h5>
+          <h5 class="card-title">Parfums E02</h5>
           <p class="text-danger fw-bold">$5.500</p>
           <p class="card-text">B-062 LAVIT CARNAV.62 CORAL.</p>
         </div>
@@ -184,9 +185,9 @@ document.addEventListener("keydown", function(e) {
     <!-- Producto 3 -->
     <div class="col-md-3 mb-4" data-order="3">
       <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume3Modal">
-        <img src="img/extra/b68/b68100ml.webp" class="card-img-top" alt="B-068">
+        <img src="img/extra/b68/b68100ml.webp" class="card-img-top" alt="Parfums E03">
         <div class="card-body">
-          <h5 class="card-title">B-068</h5>
+          <h5 class="card-title">Parfums E03</h5>
           <p class="text-danger fw-bold">$5.500</p>
           <p class="card-text">B-068 LAVIT CARNAV.68 TURQUESA.</p>
         </div>
@@ -196,9 +197,9 @@ document.addEventListener("keydown", function(e) {
     <!-- Producto 4 -->
     <div class="col-md-3 mb-4" data-order="4">
       <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume4Modal">
-        <img src="img/extra/b71/b71100ml.webp" class="card-img-top" alt="B-071">
+        <img src="img/extra/b71/b71100ml.webp" class="card-img-top" alt="Parfums E04">
         <div class="card-body">
-          <h5 class="card-title">B-071</h5>
+          <h5 class="card-title">Parfums E04</h5>
           <p class="text-danger fw-bold">$5.500</p>
           <p class="card-text">B-071 LAVIT CARNAV.71 LILA.</p>
         </div>
@@ -213,7 +214,7 @@ document.addEventListener("keydown", function(e) {
     <div class="modal-content">
       <!-- Título -->
       <div class="modal-header">
-        <h5 class="modal-title" id="perfume1Label">B-059</h5>
+        <h5 class="modal-title" id="perfume1Label">Parfums E01</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
 
@@ -255,7 +256,7 @@ document.addEventListener("keydown", function(e) {
     <div class="modal-content">
       <!-- Título -->
       <div class="modal-header">
-        <h5 class="modal-title" id="perfume2Modal">B-062</h5>
+        <h5 class="modal-title" id="perfume2Modal">Parfums E02</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
 
@@ -297,7 +298,7 @@ document.addEventListener("keydown", function(e) {
     <div class="modal-content">
       <!-- Título -->
       <div class="modal-header">
-        <h5 class="modal-title" id="perfume3Modal">B-068</h5>
+        <h5 class="modal-title" id="perfume3Modal">Parfums E03</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
 
@@ -339,7 +340,7 @@ document.addEventListener("keydown", function(e) {
     <div class="modal-content">
       <!-- Título -->
       <div class="modal-header">
-        <h5 class="modal-title" id="perfume4Modal">B-071</h5>
+        <h5 class="modal-title" id="perfume4Modal">Parfums E04</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
 
@@ -383,9 +384,9 @@ document.addEventListener("keydown", function(e) {
     <!-- Producto 5 -->
     <div class="col-md-3 mb-4" data-order="5">
       <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume5Modal">
-        <img src="img/extra/b76/b76100ml.webp" class="card-img-top" alt="B-076">
+        <img src="img/extra/b76/b76100ml.webp" class="card-img-top" alt="Parfums E05">
         <div class="card-body">
-          <h5 class="card-title">B-076</h5>
+          <h5 class="card-title">Parfums E05</h5>
           <p class="text-danger fw-bold">$5.500</p>
           <p class="card-text">B-076 LAVIT CARNAV.76 AMARILLO.</p>
         </div>
@@ -395,9 +396,9 @@ document.addEventListener("keydown", function(e) {
     <!-- Producto 6 -->
     <div class="col-md-3 mb-4" data-order="6">
       <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume6Modal">
-        <img src="img/extra/b102/b102210ml.webp" class="card-img-top" alt="B-102">
+        <img src="img/extra/b102/b102210ml.webp" class="card-img-top" alt="Parfums E06">
         <div class="card-body">
-          <h5 class="card-title">B-102</h5>
+          <h5 class="card-title">Parfums E06</h5>
           <p class="text-danger fw-bold">$5.500</p>
           <p class="card-text">B-102 BODY SPLASH ROJO.</p>
         </div>
@@ -407,9 +408,9 @@ document.addEventListener("keydown", function(e) {
     <!-- Producto 7 -->
     <div class="col-md-3 mb-4" data-order="7">
       <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume7Modal">
-        <img src="img/extra/b103/b103210ml.webp" class="card-img-top" alt="B-103">
+        <img src="img/extra/b103/b103210ml.webp" class="card-img-top" alt="Parfums E07">
         <div class="card-body">
-          <h5 class="card-title">B-103</h5>
+          <h5 class="card-title">Parfums E07</h5>
           <p class="text-danger fw-bold">$5.500</p>
           <p class="card-text">B-103 BODY SPLASH VERDE.</p>
         </div>
@@ -419,9 +420,9 @@ document.addEventListener("keydown", function(e) {
     <!-- Producto 8 -->
     <div class="col-md-3 mb-4" data-order="8">
       <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume8Modal">
-        <img src="img/extra/b104/b104210ml.webp" class="card-img-top" alt="B-104">
+        <img src="img/extra/b104/b104210ml.webp" class="card-img-top" alt="Parfums E08">
         <div class="card-body">
-          <h5 class="card-title">B-104</h5>
+          <h5 class="card-title">Parfums E08</h5>
           <p class="text-danger fw-bold">$5.500</p>
           <p class="card-text">B-104 BODY SPLASH VIOLETA.</p>
         </div>
@@ -436,7 +437,7 @@ document.addEventListener("keydown", function(e) {
     <div class="modal-content">
       <!-- Título -->
       <div class="modal-header">
-        <h5 class="modal-title" id="perfume5Label">B-076</h5>
+        <h5 class="modal-title" id="perfume5Label">Parfums E05</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
 
@@ -478,7 +479,7 @@ document.addEventListener("keydown", function(e) {
     <div class="modal-content">
       <!-- Título -->
       <div class="modal-header">
-        <h5 class="modal-title" id="perfume6Modal">B-102</h5>
+        <h5 class="modal-title" id="perfume6Modal">Parfums E06</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
 
@@ -520,7 +521,7 @@ document.addEventListener("keydown", function(e) {
     <div class="modal-content">
       <!-- Título -->
       <div class="modal-header">
-        <h5 class="modal-title" id="perfume7Modal">B-103</h5>
+        <h5 class="modal-title" id="perfume7Modal">Parfums E07</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
 
@@ -562,7 +563,7 @@ document.addEventListener("keydown", function(e) {
     <div class="modal-content">
       <!-- Título -->
       <div class="modal-header">
-        <h5 class="modal-title" id="perfume8Modal">B-104</h5>
+        <h5 class="modal-title" id="perfume8Modal">Parfums E08</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
 
@@ -606,9 +607,9 @@ document.addEventListener("keydown", function(e) {
     <!-- Producto 9 -->
     <div class="col-md-3 mb-4" data-order="9">
       <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume9Modal">
-        <img src="img/extra/b105/b105210ml.webp" class="card-img-top" alt="B-105">
+        <img src="img/extra/b105/b105210ml.webp" class="card-img-top" alt="Parfums E09">
         <div class="card-body">
-          <h5 class="card-title">B-105</h5>
+          <h5 class="card-title">Parfums E09</h5>
           <p class="text-danger fw-bold">$5.500</p>
           <p class="card-text">B-105 BODY SPLASH AMARILLO.</p>
         </div>
@@ -618,9 +619,9 @@ document.addEventListener("keydown", function(e) {
     <!-- Producto 10 -->
     <div class="col-md-3 mb-4" data-order="10">
       <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume10Modal">
-        <img src="img/extra/b106/b106210ml.webp" class="card-img-top" alt="B-106">
+        <img src="img/extra/b106/b106210ml.webp" class="card-img-top" alt="Parfums E10">
         <div class="card-body">
-          <h5 class="card-title">B-106</h5>
+          <h5 class="card-title">Parfums E10</h5>
           <p class="text-danger fw-bold">$5.500</p>
           <p class="card-text">B-106 BODY SPLASH ROSADO.</p>
         </div>
@@ -630,9 +631,9 @@ document.addEventListener("keydown", function(e) {
     <!-- Producto 11 -->
     <div class="col-md-3 mb-4" data-order="11">
       <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume11Modal">
-        <img src="img/extra/b107/b107210ml.webp" class="card-img-top" alt="B-107">
+        <img src="img/extra/b107/b107210ml.webp" class="card-img-top" alt="Parfums E11">
         <div class="card-body">
-          <h5 class="card-title">B-107</h5>
+          <h5 class="card-title">Parfums E11</h5>
           <p class="text-danger fw-bold">$5.500</p>
           <p class="card-text">B-107 BODY SPLASH GRIS BLANCA.</p>
         </div>
@@ -642,9 +643,9 @@ document.addEventListener("keydown", function(e) {
     <!-- Producto 12 -->
     <div class="col-md-3 mb-4" data-order="12">
       <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume12Modal">
-        <img src="img/extra/y01/y1.webp" class="card-img-top" alt="Parfum F12">
+        <img src="img/extra/y01/y1.webp" class="card-img-top" alt="Parfums E12">
         <div class="card-body">
-          <h5 class="card-title">Y-01</h5>
+          <h5 class="card-title">Parfums E12</h5>
           <p class="text-danger fw-bold">$9.500</p>
           <p class="card-text">Y-01 DIFUSOR HOGAR DULCE HOGAR.</p>
         </div>
@@ -659,7 +660,7 @@ document.addEventListener("keydown", function(e) {
     <div class="modal-content">
       <!-- Título -->
       <div class="modal-header">
-        <h5 class="modal-title" id="perfume9Modal">B-105</h5>
+        <h5 class="modal-title" id="perfume9Modal">Parfums E09</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
 
@@ -701,7 +702,7 @@ document.addEventListener("keydown", function(e) {
     <div class="modal-content">
       <!-- Título -->
       <div class="modal-header">
-        <h5 class="modal-title" id="perfume10Modal">B-106</h5>
+        <h5 class="modal-title" id="perfume10Modal">Parfums E10</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
 
@@ -743,7 +744,7 @@ document.addEventListener("keydown", function(e) {
     <div class="modal-content">
       <!-- Título -->
       <div class="modal-header">
-        <h5 class="modal-title" id="perfume11Modal">B-107</h5>
+        <h5 class="modal-title" id="perfume11Modal">Parfums E11</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
 
@@ -785,7 +786,7 @@ document.addEventListener("keydown", function(e) {
     <div class="modal-content">
       <!-- Título -->
       <div class="modal-header">
-        <h5 class="modal-title" id="perfume12Modal">Y-01</h5>
+        <h5 class="modal-title" id="perfume12Modal">Parfums E12</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
 
@@ -829,9 +830,9 @@ document.addEventListener("keydown", function(e) {
     <!-- Producto 13 -->
     <div class="col-md-3 mb-4" data-order="13">
       <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume13Modal">
-        <img src="img/extra/y02/y2.webp" class="card-img-top" alt="Y-02">
+        <img src="img/extra/y02/y2.webp" class="card-img-top" alt="Parfums E13">
         <div class="card-body">
-          <h5 class="card-title">Y-02</h5>
+          <h5 class="card-title">Parfums E13</h5>
           <p class="text-danger fw-bold">$9.500</p>
           <p class="card-text">Y-02 DIFUSOR SINFONIA AROMATICA.</p>
         </div>
@@ -841,9 +842,9 @@ document.addEventListener("keydown", function(e) {
     <!-- Producto 14 -->
     <div class="col-md-3 mb-4" data-order="14">
       <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume14Modal">
-        <img src="img/extra/y03/y3.webp" class="card-img-top" alt="Y-03">
+        <img src="img/extra/y03/y3.webp" class="card-img-top" alt="Parfums E14">
         <div class="card-body">
-          <h5 class="card-title">Y-03</h5>
+          <h5 class="card-title">Parfums E14</h5>
           <p class="text-danger fw-bold">$9.500</p>
           <p class="card-text">Y-03 DIFUSOR SUSURROS DEL BOSQUE.</p>
         </div>
@@ -853,9 +854,9 @@ document.addEventListener("keydown", function(e) {
     <!-- Producto 15 -->
     <div class="col-md-3 mb-4" data-order="15">
       <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume15Modal">
-        <img src="img/extra/y11/y11.webp" class="card-img-top" alt="Y-11">
+        <img src="img/extra/y11/y11.webp" class="card-img-top" alt="Parfums E15">
         <div class="card-body">
-          <h5 class="card-title">Y-11</h5>
+          <h5 class="card-title">Parfums E15</h5>
           <p class="text-danger fw-bold">$7.500</p>
           <p class="card-text">Y-11 AMBIENTADOR HOGAR DULCE HOGAR.</p>
         </div>
@@ -865,9 +866,9 @@ document.addEventListener("keydown", function(e) {
     <!-- Producto 16 -->
     <div class="col-md-3 mb-4" data-order="16">
       <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume16Modal">
-        <img src="img/extra/y12/y12.webp" class="card-img-top" alt="Y-12">
+        <img src="img/extra/y12/y12.webp" class="card-img-top" alt="Parfums E16">
         <div class="card-body">
-          <h5 class="card-title">Y-12</h5>
+          <h5 class="card-title">Parfums E16</h5>
           <p class="text-danger fw-bold">$7.500</p>
           <p class="card-text">Y-12 AMBIENTADOR SINFONIA AROMATICA.</p>
         </div>
@@ -882,7 +883,7 @@ document.addEventListener("keydown", function(e) {
     <div class="modal-content">
       <!-- Título -->
       <div class="modal-header">
-        <h5 class="modal-title" id="perfume13Label">Y-02</h5>
+        <h5 class="modal-title" id="perfume13Label">Parfums E13</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
 
@@ -924,7 +925,7 @@ document.addEventListener("keydown", function(e) {
     <div class="modal-content">
       <!-- Título -->
       <div class="modal-header">
-        <h5 class="modal-title" id="perfume14Modal">Y-03</h5>
+        <h5 class="modal-title" id="perfume14Modal">Parfums E14</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
 
@@ -966,7 +967,7 @@ document.addEventListener("keydown", function(e) {
     <div class="modal-content">
       <!-- Título -->
       <div class="modal-header">
-        <h5 class="modal-title" id="perfume15Modal">Y-11</h5>
+        <h5 class="modal-title" id="perfume15Modal">Parfums E15</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
 
@@ -1008,7 +1009,7 @@ document.addEventListener("keydown", function(e) {
     <div class="modal-content">
       <!-- Título -->
       <div class="modal-header">
-        <h5 class="modal-title" id="perfume16Modal">Y-12</h5>
+        <h5 class="modal-title" id="perfume16Modal">Parfums E16</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
 
@@ -1052,9 +1053,9 @@ document.addEventListener("keydown", function(e) {
     <!-- Producto 17 -->
     <div class="col-md-3 mb-4" data-order="17">
       <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume17Modal">
-        <img src="img/extra/y13/y13.webp" class="card-img-top" alt="Y-13">
+        <img src="img/extra/y13/y13.webp" class="card-img-top" alt="Parfums E17">
         <div class="card-body">
-          <h5 class="card-title">Y-13</h5>
+          <h5 class="card-title">Parfums E17</h5>
           <p class="text-danger fw-bold">$5.500 - $15.500</p>
           <p class="card-text">Y-13 AMBIENTADOR SUSURROS DE BOSQUE.</p>
         </div>
@@ -1064,9 +1065,9 @@ document.addEventListener("keydown", function(e) {
     <!-- Producto 18 -->
     <div class="col-md-3 mb-4" data-order="18">
       <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume18Modal">
-        <img src="img/extra/y21/y21.webp" class="card-img-top" alt="Y-21">
+        <img src="img/extra/y21/y21.webp" class="card-img-top" alt="Parfums E18">
         <div class="card-body">
-          <h5 class="card-title">Y-21</h5>
+          <h5 class="card-title">Parfums E18</h5>
           <p class="text-danger fw-bold">$5.500 - $15.500</p>
           <p class="card-text">Y-21 RECARGA HOGAR DULCE HOGAR.</p>
         </div>
@@ -1076,9 +1077,9 @@ document.addEventListener("keydown", function(e) {
     <!-- Producto 19 -->
     <div class="col-md-3 mb-4" data-order="19">
       <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume19Modal">
-        <img src="img/extra/y22/y22.webp" class="card-img-top" alt="Y-22">
+        <img src="img/extra/y22/y22.webp" class="card-img-top" alt="Parfums E19">
         <div class="card-body">
-          <h5 class="card-title">Y-22</h5>
+          <h5 class="card-title">Parfums E19</h5>
           <p class="text-danger fw-bold">$5.500</p>
           <p class="card-text">Y-22 RECARGA SINFONIA AROMATICA.</p>
         </div>
@@ -1088,9 +1089,9 @@ document.addEventListener("keydown", function(e) {
     <!-- Producto 20 -->
     <div class="col-md-3 mb-4" data-order="20">
       <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume20Modal">
-        <img src="img/extra/y23/y23.webp" class="card-img-top" alt="Y-23">
+        <img src="img/extra/y23/y23.webp" class="card-img-top" alt="Parfums E20">
         <div class="card-body">
-          <h5 class="card-title">Y-23</h5>
+          <h5 class="card-title">Parfums E20</h5>
           <p class="text-danger fw-bold">$5.500</p>
           <p class="card-text">Y-23 RECARGA SUSURROS DE BOSQUE.</p>
         </div>
@@ -1105,7 +1106,7 @@ document.addEventListener("keydown", function(e) {
     <div class="modal-content">
       <!-- Título -->
       <div class="modal-header">
-        <h5 class="modal-title" id="perfume17Label">Y-13</h5>
+        <h5 class="modal-title" id="perfume17Label">Parfums E17</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
 
@@ -1147,7 +1148,7 @@ document.addEventListener("keydown", function(e) {
     <div class="modal-content">
       <!-- Título -->
       <div class="modal-header">
-        <h5 class="modal-title" id="perfume18Modal">Y-21</h5>
+        <h5 class="modal-title" id="perfume18Modal">Parfums E18</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
 
@@ -1189,7 +1190,7 @@ document.addEventListener("keydown", function(e) {
     <div class="modal-content">
       <!-- Título -->
       <div class="modal-header">
-        <h5 class="modal-title" id="perfume19Modal">Y-22</h5>
+        <h5 class="modal-title" id="perfume19Modal">Parfums E19</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
 
@@ -1231,7 +1232,7 @@ document.addEventListener("keydown", function(e) {
     <div class="modal-content">
       <!-- Título -->
       <div class="modal-header">
-        <h5 class="modal-title" id="perfume20Modal">Y-23</h5>
+        <h5 class="modal-title" id="perfume20Modal">Parfums E20</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
 
