@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extras</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Tu CSS personalizado -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header con Bootstrap -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container-fluid">
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="img/Logo.png" alt="Logo Essenciel" class="img-fluid" style="max-height:100px;">
+      <!-- Icono de la app -->
+      <i class="bi bi-bag-fill ms-2" style="font-size: 1.5rem; color:#333;"></i>
+    </a>
+
+    <!-- Botón responsive -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menú centrado -->
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="phombre.html">Perfumes Hombres</a></li>
+        <li class="nav-item"><a class="nav-link" href="pmujer.html">Perfumes Mujeres</a></li>
+        <li class="nav-item"><a class="nav-link" href="extra.html">Perfumes Extras</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link" href="quienessomos.html">Quienes Somos</a></li>
+      </ul>
+    </div>
+
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="img/Logo.png" alt="Logo Essenciel" class="img-fluid" style="max-height:100px;">
+      <!-- Icono de la app -->
+      <i class="bi bi-bag-fill ms-2" style="font-size: 1.5rem; color:#333;"></i>
+    </a>
+  </div>
+</nav>
+
+<style>
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #fdfdfd;
+      color: #333;
+    }
+    section {
+      padding: 40px;
+      max-width: 900px;
+      margin: auto;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      margin: 10px 0;
+      padding-left: 20px;
+      position: relative;
+    }
+  </style>
+
+<div class="container mt-5 pt-5">
+  <br>
+  <br>
+  <h1 class="text-center">Perfumes Extras</h1>
+  <p class="card-text">Descubre los perfumes alternativos en Karoussis Parfums. Fragancias de alta calidad, inspiradas en aromas icónicos, frescas e ideales para el día a día.</p>
+</div>
+
+<!--COLUMNA 1 -->
+
+<div class="container mt-3 pt-3">
+  <div class="row">
+
+    <!-- Producto 1 -->
+    <div class="col-md-3 mb-4">
+      <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume1Modal">
+        <img src="img/extra/b59/b59100ml.webp" class="card-img-top" alt="B-059">
+        <div class="card-body">
+          <h5 class="card-title">B-059</h5>
+          <p class="text-danger fw-bold">$5.500</p>
+          <p class="card-text">B-059 LAVIT CARNAV.59 ROSADO.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Producto 2 -->
+    <div class="col-md-3 mb-4">
+      <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume2Modal">
+        <img src="img/extra/b62/b62100ml.webp" class="card-img-top" alt="PB-062">
+        <div class="card-body">
+          <h5 class="card-title">B-062</h5>
+          <p class="text-danger fw-bold">$5.500</p>
+          <p class="card-text">B-062 LAVIT CARNAV.62 CORAL.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Producto 3 -->
+    <div class="col-md-3 mb-4">
+      <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume3Modal">
+        <img src="img/extra/b68/b68100ml.webp" class="card-img-top" alt="B-068">
+        <div class="card-body">
+          <h5 class="card-title">B-068</h5>
+          <p class="text-danger fw-bold">$5.500</p>
+          <p class="card-text">B-068 LAVIT CARNAV.68 TURQUESA.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Producto 4 -->
+    <div class="col-md-3 mb-4">
+      <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume4Modal">
+        <img src="img/extra/b71/b71100ml.webp" class="card-img-top" alt="B-071">
+        <div class="card-body">
+          <h5 class="card-title">PB-071</h5>
+          <p class="text-danger fw-bold">$5.500</p>
+          <p class="card-text">B-071 LAVIT CARNAV.71 LILA.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Producto 1 -->
+<div class="modal fade" id="perfume1Modal" tabindex="-1" aria-labelledby="perfume1Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <!-- Título -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="perfume1Label">B-059</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <!-- Cuerpo -->
+      <div class="modal-body">
+        <div class="row">
+          <!-- Carrusel a la izquierda -->
+          <div class="col-md-6">
+            <div id="carouselPerfume1" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/extra/b59/b59100ml.webp" class="d-block w-100" alt="Imagen 1">
+                </div>
+              </div>
+            </div>
+
+            <!-- Miniaturas debajo -->
+            <div class="d-flex justify-content-center mt-3">
+              <img src="img/extra/b59/b59100ml.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume1" data-bs-slide-to="0">
+            </div>
+          </div>
+
+          <!-- Texto a la derecha -->
+          <div class="col-md-6">
+            <p><strong>Precio:</strong> $5.500</p>
+            <p>100 ml - <strong>$5.500 - </strong><strong> 2x$10.000</strong></p>
+            <p>B-059 LAVIT CARNAV.59 ROSADO</p>
+            <p>Inspirados en la energía del verano, estos splash corporales combinan aromas dulces, frescos y tropicales que aportan una sensación inmediata de frescura y bienestar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Producto 2 -->
+<div class="modal fade" id="perfume2Modal" tabindex="-1" aria-labelledby="perfume2Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <!-- Título -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="perfume2Modal">B-062</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <!-- Cuerpo -->
+      <div class="modal-body">
+        <div class="row">
+          <!-- Carrusel a la izquierda -->
+          <div class="col-md-6">
+            <div id="carouselPerfume2" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/extra/b62/b62100ml.webp" class="d-block w-100" alt="Imagen 1">
+                </div>
+              </div>
+            </div>
+
+            <!-- Miniaturas debajo -->
+            <div class="d-flex justify-content-center mt-3">
+              <img src="img/extra/b62/b62100ml.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume2" data-bs-slide-to="0">
+            </div>
+          </div>
+
+          <!-- Texto a la derecha -->
+          <div class="col-md-6">
+            <p><strong>Precio:</strong> $5.500</p>
+            <p>100 ml - <strong>$5.500 - </strong><strong> 2x$10.000</strong></p>
+            <p>B-062 LAVIT CARNAV.62 CORAL</p>
+            <p>Inspirados en la energía del verano, estos splash corporales combinan aromas dulces, frescos y tropicales que aportan una sensación inmediata de frescura y bienestar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Producto 3 -->
+<div class="modal fade" id="perfume3Modal" tabindex="-1" aria-labelledby="perfume3Modal" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <!-- Título -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="perfume3Modal">B-068</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <!-- Cuerpo -->
+      <div class="modal-body">
+        <div class="row">
+          <!-- Carrusel a la izquierda -->
+          <div class="col-md-6">
+            <div id="carouselPerfume3" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/extra/b68/b68100ml.webp" class="d-block w-100" alt="Imagen 1">
+                </div>
+              </div>
+            </div>
+
+            <!-- Miniaturas debajo -->
+            <div class="d-flex justify-content-center mt-3">
+              <img src="img/extra/b68/b68100ml.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume3" data-bs-slide-to="0">
+            </div>
+          </div>
+
+          <!-- Texto a la derecha -->
+          <div class="col-md-6">
+            <p><strong>Precio:</strong> $5.500</p>
+            <p>100 ml - <strong>$5.500 - </strong><strong> 2x$10.000</strong></p>
+            <p>B-068 LAVIT CARNAV.68 TURQUESA</p>
+            <p>Inspirados en la energía del verano, estos splash corporales combinan aromas dulces, frescos y tropicales que aportan una sensación inmediata de frescura y bienestar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Producto 4 -->
+<div class="modal fade" id="perfume4Modal" tabindex="-1" aria-labelledby="perfume4Modal" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <!-- Título -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="perfume4Modal">B-071</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <!-- Cuerpo -->
+      <div class="modal-body">
+        <div class="row">
+          <!-- Carrusel a la izquierda -->
+          <div class="col-md-6">
+            <div id="carouselPerfume4" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/extra/b71/b71100ml.webp" class="d-block w-100" alt="Imagen 1">
+                </div>
+              </div>
+            </div>
+
+            <!-- Miniaturas debajo -->
+            <div class="d-flex justify-content-center mt-3">
+              <img src="img/extra/b71/b71100ml.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume4" data-bs-slide-to="0">
+            </div>
+          </div>
+
+          <!-- Texto a la derecha -->
+          <div class="col-md-6">
+            <p><strong>Precio:</strong> $5.500</p>
+            <p>100 ml - <strong>$5.500 - </strong><strong> 2x$10.000</strong></p>
+            <p>B-071 LAVIT CARNAV.71 LILA</p>
+            <p>Inspirados en la energía del verano, estos splash corporales combinan aromas dulces, frescos y tropicales que aportan una sensación inmediata de frescura y bienestar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--COLUMNA 2 -->
+
+<div class="container">
+  <div class="row">
+
+    <!-- Producto 5 -->
+    <div class="col-md-3 mb-4">
+      <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume5Modal">
+        <img src="img/extra/b76/b76100ml.webp" class="card-img-top" alt="B-076">
+        <div class="card-body">
+          <h5 class="card-title">B-076</h5>
+          <p class="text-danger fw-bold">$5.500</p>
+          <p class="card-text">B-076 LAVIT CARNAV.76 AMARILLO.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Producto 6 -->
+    <div class="col-md-3 mb-4">
+      <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume6Modal">
+        <img src="img/extra/b102/b102210ml.webp" class="card-img-top" alt="B-102">
+        <div class="card-body">
+          <h5 class="card-title">B-102</h5>
+          <p class="text-danger fw-bold">$5.500</p>
+          <p class="card-text">B-102 BODY SPLASH ROJO.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Producto 7 -->
+    <div class="col-md-3 mb-4">
+      <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume7Modal">
+        <img src="img/extra/b103/b103210ml.webp" class="card-img-top" alt="B-103">
+        <div class="card-body">
+          <h5 class="card-title">B-103</h5>
+          <p class="text-danger fw-bold">$5.500</p>
+          <p class="card-text">B-103 BODY SPLASH VERDE.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Producto 8 -->
+    <div class="col-md-3 mb-4">
+      <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume8Modal">
+        <img src="img/extra/b104/b104210ml.webp" class="card-img-top" alt="B-104">
+        <div class="card-body">
+          <h5 class="card-title">B-104</h5>
+          <p class="text-danger fw-bold">$5.500</p>
+          <p class="card-text">B-104 BODY SPLASH VIOLETA.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Producto 5 -->
+<div class="modal fade" id="perfume5Modal" tabindex="-1" aria-labelledby="perfume5Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <!-- Título -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="perfume5Label">B-076</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <!-- Cuerpo -->
+      <div class="modal-body">
+        <div class="row">
+          <!-- Carrusel a la izquierda -->
+          <div class="col-md-6">
+            <div id="carouselPerfume5" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/extra/b76/b76100ml.webp" class="d-block w-100" alt="Imagen 1">
+                </div>
+              </div>
+            </div>
+
+            <!-- Miniaturas debajo -->
+            <div class="d-flex justify-content-center mt-3">
+              <img src="img/extra/b76/b76100ml.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume5" data-bs-slide-to="0">
+            </div>
+          </div>
+
+          <!-- Texto a la derecha -->
+          <div class="col-md-6">
+            <p><strong>Precio:</strong> $5.500</p>
+            <p>100 ml - <strong>$5.500 - </strong><strong> 2x$10.000</strong></p>
+            <p>B-076 LAVIT CARNAV.76 AMARILLO</p>
+            <p>Inspirados en la energía del verano, estos splash corporales combinan aromas dulces, frescos y tropicales que aportan una sensación inmediata de frescura y bienestar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Producto 6 -->
+<div class="modal fade" id="perfume6Modal" tabindex="-1" aria-labelledby="perfume6Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <!-- Título -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="perfume6Modal">B-102</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <!-- Cuerpo -->
+      <div class="modal-body">
+        <div class="row">
+          <!-- Carrusel a la izquierda -->
+          <div class="col-md-6">
+            <div id="carouselPerfume6" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/extra/b102/b102210ml.webp" class="d-block w-100" alt="Imagen 1">
+                </div>
+              </div>
+            </div>
+
+            <!-- Miniaturas debajo -->
+            <div class="d-flex justify-content-center mt-3">
+              <img src="img/extra/b102/b102210ml.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume6" data-bs-slide-to="0">
+            </div>
+          </div>
+
+          <!-- Texto a la derecha -->
+          <div class="col-md-6">
+            <p><strong>Precio:</strong> $5.500</p>
+            <p>210 ml - <strong>$5.500 - </strong><strong> 2x$10.000</strong></p>
+            <p>B-102 BODY SPLASH ROJO</p>
+            <p>Tiene un toque frutal que la hace muy agradable y ligera, ideal para el uso diario. Además, suele tener notas de fondo que aportan una sensación de suavidad y calidez, lo que la convierte en una opción perfecta para quienes buscan un perfume que sea tanto refrescante como envolvente. ¡Es una fragancia que seguramente te hará sentir fresca y vibrante!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Producto 7 -->
+<div class="modal fade" id="perfume7Modal" tabindex="-1" aria-labelledby="perfume7Modal" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <!-- Título -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="perfume7Modal">B-103</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <!-- Cuerpo -->
+      <div class="modal-body">
+        <div class="row">
+          <!-- Carrusel a la izquierda -->
+          <div class="col-md-6">
+            <div id="carouselPerfume7" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/extra/b103/b103210ml.webp" class="d-block w-100" alt="Imagen 1">
+                </div>
+              </div>
+            </div>
+
+            <!-- Miniaturas debajo -->
+            <div class="d-flex justify-content-center mt-3">
+              <img src="img/extra/b103/b103210ml.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume7" data-bs-slide-to="0">
+            </div>
+          </div>
+
+          <!-- Texto a la derecha -->
+          <div class="col-md-6">
+            <p><strong>Precio:</strong> $5.500</p>
+            <p>210 ml - <strong>$5.500 - </strong><strong> 2x$10.000</strong></p>
+            <p>B-103 BODY SPLASH VERDE</p>
+            <p>Tiene un toque frutal que la hace muy agradable y ligera, ideal para el uso diario. Además, suele tener notas de fondo que aportan una sensación de suavidad y calidez, lo que la convierte en una opción perfecta para quienes buscan un perfume que sea tanto refrescante como envolvente. ¡Es una fragancia que seguramente te hará sentir fresca y vibrante!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Producto 8 -->
+<div class="modal fade" id="perfume8Modal" tabindex="-1" aria-labelledby="perfume8Modal" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <!-- Título -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="perfume8Modal">B-104</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <!-- Cuerpo -->
+      <div class="modal-body">
+        <div class="row">
+          <!-- Carrusel a la izquierda -->
+          <div class="col-md-6">
+            <div id="carouselPerfume8" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/extra/b104/b104210ml.webp" class="d-block w-100" alt="Imagen 1">
+                </div>
+              </div>
+            </div>
+
+            <!-- Miniaturas debajo -->
+            <div class="d-flex justify-content-center mt-3">
+              <img src="img/extra/b104/b104210ml.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume8" data-bs-slide-to="0">
+            </div>
+          </div>
+
+          <!-- Texto a la derecha -->
+          <div class="col-md-6">
+            <p><strong>Precio:</strong> $5.500</p>
+            <p>210 ml - <strong>$5.500 - </strong><strong> 2x$10.000</strong></p>
+            <p>B-104 BODY SPLASH VIOLETA</p>
+            <p>Tiene un toque frutal que la hace muy agradable y ligera, ideal para el uso diario. Además, suele tener notas de fondo que aportan una sensación de suavidad y calidez, lo que la convierte en una opción perfecta para quienes buscan un perfume que sea tanto refrescante como envolvente. ¡Es una fragancia que seguramente te hará sentir fresca y vibrante!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--COLUMNA 3 -->
+
+<div class="container">
+  <div class="row">
+
+    <!-- Producto 9 -->
+    <div class="col-md-3 mb-4">
+      <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume9Modal">
+        <img src="img/extra/b105/b105210ml.webp" class="card-img-top" alt="B-105">
+        <div class="card-body">
+          <h5 class="card-title">B-105</h5>
+          <p class="text-danger fw-bold">$5.500</p>
+          <p class="card-text">B-105 BODY SPLASH AMARILLO.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Producto 10 -->
+    <div class="col-md-3 mb-4">
+      <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume10Modal">
+        <img src="img/extra/b106/b106210ml.webp" class="card-img-top" alt="B-106">
+        <div class="card-body">
+          <h5 class="card-title">B-106</h5>
+          <p class="text-danger fw-bold">$5.500</p>
+          <p class="card-text">B-106 BODY SPLASH ROSADO.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Producto 11 -->
+    <div class="col-md-3 mb-4">
+      <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume11Modal">
+        <img src="img/extra/b107/b107210ml.webp" class="card-img-top" alt="B-107">
+        <div class="card-body">
+          <h5 class="card-title">B-107</h5>
+          <p class="text-danger fw-bold">$5.500</p>
+          <p class="card-text">B-107 BODY SPLASH GRIS BLANCA.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Producto 12 -->
+    <div class="col-md-3 mb-4">
+      <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume12Modal">
+        <img src="img/extra/y01/y1.webp" class="card-img-top" alt="Parfum F12">
+        <div class="card-body">
+          <h5 class="card-title">Y-01</h5>
+          <p class="text-danger fw-bold">$9.500</p>
+          <p class="card-text">Y-01 DIFUSOR HOGAR DULCE HOGAR.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Producto 9 -->
+<div class="modal fade" id="perfume9Modal" tabindex="-1" aria-labelledby="perfume9Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <!-- Título -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="perfume9Modal">B-105</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <!-- Cuerpo -->
+      <div class="modal-body">
+        <div class="row">
+          <!-- Carrusel a la izquierda -->
+          <div class="col-md-6">
+            <div id="carouselPerfume9" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/extra/b105/b105210ml.webp" class="d-block w-100" alt="Imagen 1">
+                </div>
+              </div>
+            </div>
+
+            <!-- Miniaturas debajo -->
+            <div class="d-flex justify-content-center mt-3">
+              <img src="img/extra/b105/b105210ml.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume9" data-bs-slide-to="0">
+            </div>
+          </div>
+
+          <!-- Texto a la derecha -->
+          <div class="col-md-6">
+            <p><strong>Precio:</strong> $5.500</p>
+            <p>210 ml - <strong>$5.500 - </strong><strong> 2x$10.000</strong></p>
+            <p>B-105 BODY SPLASH AMARILLO</p>
+            <p>Tiene un toque frutal que la hace muy agradable y ligera, ideal para el uso diario. Además, suele tener notas de fondo que aportan una sensación de suavidad y calidez, lo que la convierte en una opción perfecta para quienes buscan un perfume que sea tanto refrescante como envolvente. ¡Es una fragancia que seguramente te hará sentir fresca y vibrante!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Producto 10 -->
+<div class="modal fade" id="perfume10Modal" tabindex="-1" aria-labelledby="perfume10Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <!-- Título -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="perfume10Modal">B-106</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <!-- Cuerpo -->
+      <div class="modal-body">
+        <div class="row">
+          <!-- Carrusel a la izquierda -->
+          <div class="col-md-6">
+            <div id="carouselPerfume10" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/extra/b106/b106210ml.webp" class="d-block w-100" alt="Imagen 1">
+                </div>
+              </div>
+            </div>
+
+            <!-- Miniaturas debajo -->
+            <div class="d-flex justify-content-center mt-3">
+              <img src="img/extra/b106/b106210ml.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume10" data-bs-slide-to="0">
+            </div>
+          </div>
+
+          <!-- Texto a la derecha -->
+          <div class="col-md-6">
+            <p><strong>Precio:</strong> $5.500</p>
+            <p>210 ml - <strong>$5.500 - </strong><strong> 2x$10.000</strong></p>
+            <p>B-106 BODY SPLASH ROSADO</p>
+            <p>Tiene un toque frutal que la hace muy agradable y ligera, ideal para el uso diario. Además, suele tener notas de fondo que aportan una sensación de suavidad y calidez, lo que la convierte en una opción perfecta para quienes buscan un perfume que sea tanto refrescante como envolvente. ¡Es una fragancia que seguramente te hará sentir fresca y vibrante!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Producto 11 -->
+<div class="modal fade" id="perfume11Modal" tabindex="-1" aria-labelledby="perfume11Modal" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <!-- Título -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="perfume11Modal">B-107</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <!-- Cuerpo -->
+      <div class="modal-body">
+        <div class="row">
+          <!-- Carrusel a la izquierda -->
+          <div class="col-md-6">
+            <div id="carouselPerfume11" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/extra/b107/b107210ml.webp" class="d-block w-100" alt="Imagen 1">
+                </div>
+              </div>
+            </div>
+
+            <!-- Miniaturas debajo -->
+            <div class="d-flex justify-content-center mt-3">
+              <img src="img/extra/b107/b107210ml.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume11" data-bs-slide-to="0">
+            </div>
+          </div>
+
+          <!-- Texto a la derecha -->
+          <div class="col-md-6">
+            <p><strong>Precio:</strong> $5.500</p>
+            <p>210 ml - <strong>$5.500 - </strong><strong> 2x$10.000</strong></p>
+            <p>B-107 BODY SPLASH GRIS BLANCA</p>
+            <p>Tiene un toque frutal que la hace muy agradable y ligera, ideal para el uso diario. Además, suele tener notas de fondo que aportan una sensación de suavidad y calidez, lo que la convierte en una opción perfecta para quienes buscan un perfume que sea tanto refrescante como envolvente. ¡Es una fragancia que seguramente te hará sentir fresca y vibrante!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Producto 12 -->
+<div class="modal fade" id="perfume12Modal" tabindex="-1" aria-labelledby="perfume12Modal" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <!-- Título -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="perfume12Modal">Y-01</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <!-- Cuerpo -->
+      <div class="modal-body">
+        <div class="row">
+          <!-- Carrusel a la izquierda -->
+          <div class="col-md-6">
+            <div id="carouselPerfume12" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/extra/y01/y1.webp" class="d-block w-100" alt="Imagen 1">
+                </div>
+              </div>
+            </div>
+
+            <!-- Miniaturas debajo -->
+            <div class="d-flex justify-content-center mt-3">
+              <img src="img/extra/y01/y1.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume12" data-bs-slide-to="0">
+            </div>
+          </div>
+
+          <!-- Texto a la derecha -->
+          <div class="col-md-6">
+            <p><strong>Precio:</strong> $9.500</p>
+            <p>150 ml - <strong>$9.500 - </strong><strong> 2x$18.000</strong></p>
+            <p>Y-01 DIFUSOR HOGAR DULCE HOGAR</p>
+            <p>El difusor tiene un diseño en colores Transparente y plata, que se integra perfectamente en cualquier decoración, aportando un toque de distinción y elegancia. Su uso principal es para ambientar espacios, creando un ambiente acogedor y agradable, gracias a sus Aromas Frutales y Florales.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--COLUMNA 4 -->
+
+<div class="container">
+  <div class="row">
+
+    <!-- Producto 13 -->
+    <div class="col-md-3 mb-4">
+      <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume13Modal">
+        <img src="img/extra/y02/y2.webp" class="card-img-top" alt="Y-02">
+        <div class="card-body">
+          <h5 class="card-title">Y-02</h5>
+          <p class="text-danger fw-bold">$9.500</p>
+          <p class="card-text">Y-02 DIFUSOR SINFONIA AROMATICA.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Producto 14 -->
+    <div class="col-md-3 mb-4">
+      <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume14Modal">
+        <img src="img/extra/y03/y3.webp" class="card-img-top" alt="Y-03">
+        <div class="card-body">
+          <h5 class="card-title">Y-03</h5>
+          <p class="text-danger fw-bold">$9.500</p>
+          <p class="card-text">Y-03 DIFUSOR SUSURROS DEL BOSQUE.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Producto 15 -->
+    <div class="col-md-3 mb-4">
+      <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume15Modal">
+        <img src="img/extra/y11/y11.webp" class="card-img-top" alt="Y-11">
+        <div class="card-body">
+          <h5 class="card-title">Y-11</h5>
+          <p class="text-danger fw-bold">$7.500</p>
+          <p class="card-text">Y-11 AMBIENTADOR HOGAR DULCE HOGAR.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Producto 16 -->
+    <div class="col-md-3 mb-4">
+      <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume16Modal">
+        <img src="img/extra/y12/y12.webp" class="card-img-top" alt="Y-12">
+        <div class="card-body">
+          <h5 class="card-title">Y-12</h5>
+          <p class="text-danger fw-bold">$7.500</p>
+          <p class="card-text">Y-12 AMBIENTADOR SINFONIA AROMATICA.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Producto 13 -->
+<div class="modal fade" id="perfume13Modal" tabindex="-1" aria-labelledby="perfume13Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <!-- Título -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="perfume13Label">Y-02</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <!-- Cuerpo -->
+      <div class="modal-body">
+        <div class="row">
+          <!-- Carrusel a la izquierda -->
+          <div class="col-md-6">
+            <div id="carouselPerfume13" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/extra/y02/y2.webp" class="d-block w-100" alt="Imagen 1">
+                </div>
+              </div>
+            </div>
+
+            <!-- Miniaturas debajo -->
+            <div class="d-flex justify-content-center mt-3">
+              <img src="img/extra/y02/y2.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume13" data-bs-slide-to="0">
+            </div>
+          </div>
+
+          <!-- Texto a la derecha -->
+          <div class="col-md-6">
+            <p><strong>Precio:</strong> $9.500</p>
+            <p>150 ml - <strong>$9.500 - </strong><strong> 2x$18.000</strong></p>
+            <p>Y-02 DIFUSOR SINFONIA AROMATICA</p>
+            <p>El difusor tiene un diseño en colores Transparente y plata, que se integra perfectamente en cualquier decoración, aportando un toque de distinción y elegancia. Su uso principal es para ambientar espacios, creando un ambiente acogedor y agradable, gracias a sus Aromas Frutales y Florales.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Producto 14 -->
+<div class="modal fade" id="perfume14Modal" tabindex="-1" aria-labelledby="perfume14Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <!-- Título -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="perfume14Modal">PY-03</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <!-- Cuerpo -->
+      <div class="modal-body">
+        <div class="row">
+          <!-- Carrusel a la izquierda -->
+          <div class="col-md-6">
+            <div id="carouselPerfume14" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/extra/y03/y3.webp" class="d-block w-100" alt="Imagen 1">
+                </div>
+              </div>
+            </div>
+
+            <!-- Miniaturas debajo -->
+            <div class="d-flex justify-content-center mt-3">
+              <img src="img/extra/y03/y3.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume14" data-bs-slide-to="0">
+            </div>
+          </div>
+
+          <!-- Texto a la derecha -->
+          <div class="col-md-6">
+            <p><strong>Precio:</strong> $9.500</p>
+            <p>150 ml - <strong>$9.500 - </strong><strong> 2x$18.000</strong></p>
+            <p>Y-03 DIFUSOR SUSURROS DEL BOSQUE</p>
+            <p>El difusor tiene un diseño en colores Transparente y plata, que se integra perfectamente en cualquier decoración, aportando un toque de distinción y elegancia. Su uso principal es para ambientar espacios, creando un ambiente acogedor y agradable, gracias a sus Aromas Frutales y Florales.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Producto 15 -->
+<div class="modal fade" id="perfume15Modal" tabindex="-1" aria-labelledby="perfume15Modal" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <!-- Título -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="perfume15Modal">Y-11</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <!-- Cuerpo -->
+      <div class="modal-body">
+        <div class="row">
+          <!-- Carrusel a la izquierda -->
+          <div class="col-md-6">
+            <div id="carouselPerfume15" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/extra/y11/y11.webp" class="d-block w-100" alt="Imagen 1">
+                </div>
+              </div>
+            </div>
+
+            <!-- Miniaturas debajo -->
+            <div class="d-flex justify-content-center mt-3">
+              <img src="img/extra/y11/y11.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume15" data-bs-slide-to="0">
+            </div>
+          </div>
+
+          <!-- Texto a la derecha -->
+          <div class="col-md-6">
+            <p><strong>Precio:</strong> $7.500</p>
+            <p>350 ml - <strong>$7.500 - </strong><strong> 2x$14.000</strong></p>
+            <p>Y-11 AMBIENTADOR HOGAR DULCE HOGAR</p>
+            <p>Es una fragancia premium de la familia olfativa floral-frutal-oriental. Está diseñado específicamente para transformar la atmósfera de espacios interiores, aportando una sensación de calidez, limpieza y bienestar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Producto 16 -->
+<div class="modal fade" id="perfume16Modal" tabindex="-1" aria-labelledby="perfume16Modal" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <!-- Título -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="perfume16Modal">Y-12</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <!-- Cuerpo -->
+      <div class="modal-body">
+        <div class="row">
+          <!-- Carrusel a la izquierda -->
+          <div class="col-md-6">
+            <div id="carouselPerfume16" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/extra/y12/y12.webp" class="d-block w-100" alt="Imagen 1">
+                </div>
+              </div>
+            </div>
+
+            <!-- Miniaturas debajo -->
+            <div class="d-flex justify-content-center mt-3">
+              <img src="img/extra/y12/y12.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume16" data-bs-slide-to="0">
+            </div>
+          </div>
+
+          <!-- Texto a la derecha -->
+          <div class="col-md-6">
+            <p><strong>Precio:</strong> $7.500</p>
+            <p>350 ml - <strong>$7.500 - </strong><strong> 2x$14.000</strong></p>
+            <p>Y-12 AMBIENTADOR SINFONIA AROMATICA</p>
+            <p>Es una fragancia premium de la familia olfativa floral-frutal-citrico. Está diseñado específicamente para transformar la atmósfera de espacios interiores, aportando una sensación de calidez, limpieza y bienestar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--COLUMNA 5 -->
+
+<div class="container">
+  <div class="row">
+
+    <!-- Producto 17 -->
+    <div class="col-md-3 mb-4">
+      <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume17Modal">
+        <img src="img/extra/y13/y13.webp" class="card-img-top" alt="Y-13">
+        <div class="card-body">
+          <h5 class="card-title">Y-13</h5>
+          <p class="text-danger fw-bold">$5.500 - $15.500</p>
+          <p class="card-text">Y-13 AMBIENTADOR SUSURROS DE BOSQUE.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Producto 18 -->
+    <div class="col-md-3 mb-4">
+      <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume18Modal">
+        <img src="img/extra/y21/y21.webp" class="card-img-top" alt="Y-21">
+        <div class="card-body">
+          <h5 class="card-title">Y-21</h5>
+          <p class="text-danger fw-bold">$5.500 - $15.500</p>
+          <p class="card-text">Y-21 RECARGA HOGAR DULCE HOGAR.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Producto 19 -->
+    <div class="col-md-3 mb-4">
+      <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume19Modal">
+        <img src="img/extra/y22/y22.webp" class="card-img-top" alt="Y-22">
+        <div class="card-body">
+          <h5 class="card-title">Y-22</h5>
+          <p class="text-danger fw-bold">$5.500</p>
+          <p class="card-text">Y-22 RECARGA SINFONIA AROMATICA.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Producto 20 -->
+    <div class="col-md-3 mb-4">
+      <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume20Modal">
+        <img src="img/extra/y23/y23.webp" class="card-img-top" alt="Y-23">
+        <div class="card-body">
+          <h5 class="card-title">Y-23</h5>
+          <p class="text-danger fw-bold">$5.500</p>
+          <p class="card-text">Y-23 RECARGA SUSURROS DE BOSQUE.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Producto 17 -->
+<div class="modal fade" id="perfume17Modal" tabindex="-1" aria-labelledby="perfume17Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <!-- Título -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="perfume17Label">Y-13</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <!-- Cuerpo -->
+      <div class="modal-body">
+        <div class="row">
+          <!-- Carrusel a la izquierda -->
+          <div class="col-md-6">
+            <div id="carouselPerfume17" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/extra/y13/y13.webp" class="d-block w-100" alt="Imagen 1">
+                </div>
+              </div>
+            </div>
+
+            <!-- Miniaturas debajo -->
+            <div class="d-flex justify-content-center mt-3">
+              <img src="img/extra/y13/y13.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume17" data-bs-slide-to="0">
+            </div>
+          </div>
+
+          <!-- Texto a la derecha -->
+          <div class="col-md-6">
+            <p><strong>Precio:</strong> $7.500</p>
+            <p>350 ml - <strong>$7.500 - </strong><strong> 2x$14.000</strong></p>
+            <p>Y-13 AMBIENTADOR SUSURROS DE BOSQUE</p>
+            <p>Es una fragancia premium de la familia olfativa floral-frutal. Está diseñado específicamente para transformar la atmósfera de espacios interiores, aportando una sensación de calidez, limpieza y bienestar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Producto 18 -->
+<div class="modal fade" id="perfume18Modal" tabindex="-1" aria-labelledby="perfume18Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <!-- Título -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="perfume18Modal">Y-21</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <!-- Cuerpo -->
+      <div class="modal-body">
+        <div class="row">
+          <!-- Carrusel a la izquierda -->
+          <div class="col-md-6">
+            <div id="carouselPerfume18" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/extra/y21/y21.webp" class="d-block w-100" alt="Imagen 1">
+                </div>
+              </div>
+            </div>
+
+            <!-- Miniaturas debajo -->
+            <div class="d-flex justify-content-center mt-3">
+              <img src="img/extra/y21/y21.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume18" data-bs-slide-to="0">
+            </div>
+          </div>
+
+          <!-- Texto a la derecha -->
+          <div class="col-md-6">
+            <p><strong>Precio:</strong> $5.500</p>
+            <p>350 ml - <strong>$5.500 - </strong><strong> 2x$10.000</strong></p>
+            <p>Y-21 RECARGA HOGAR DULCE HOGAR</p>
+            <p>Sigue disfrutando de la calidez de Hogar Dulce Hogar con su formato de recarga de Briza Parfums. Su fragancia floral y amaderada envuelve cada rincón en una esencia acogedora, creando un ambiente de serenidad y bienestar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Producto 19 -->
+<div class="modal fade" id="perfume19Modal" tabindex="-1" aria-labelledby="perfume19Modal" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <!-- Título -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="perfume19Modal">Y-22</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <!-- Cuerpo -->
+      <div class="modal-body">
+        <div class="row">
+          <!-- Carrusel a la izquierda -->
+          <div class="col-md-6">
+            <div id="carouselPerfume19" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/extra/y22/y22.webp" class="d-block w-100" alt="Imagen 1">
+                </div>
+              </div>
+            </div>
+
+            <!-- Miniaturas debajo -->
+            <div class="d-flex justify-content-center mt-3">
+              <img src="img/extra/y22/y22.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume19" data-bs-slide-to="0">
+            </div>
+          </div>
+
+          <!-- Texto a la derecha -->
+          <div class="col-md-6">
+            <p><strong>Precio:</strong> $5.500</p>
+            <p>350 ml - <strong>$5.500 - </strong><strong> 2x$10.000</strong></p>
+            <p>Y-22 RECARGA SINFONIA AROMATICA</p>
+            <p>Sigue disfrutando de la calidez de Hogar Dulce Hogar con su formato de recarga de Briza Parfums. Su fragancia floral y amaderada envuelve cada rincón en una esencia acogedora, creando un ambiente de serenidad y bienestar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Producto 20 -->
+<div class="modal fade" id="perfume20Modal" tabindex="-1" aria-labelledby="perfume20Modal" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <!-- Título -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="perfume20Modal">Y-23</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <!-- Cuerpo -->
+      <div class="modal-body">
+        <div class="row">
+          <!-- Carrusel a la izquierda -->
+          <div class="col-md-6">
+            <div id="carouselPerfume20" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/extra/y23/y23.webp" class="d-block w-100" alt="Imagen 1">
+                </div>
+              </div>
+            </div>
+
+            <!-- Miniaturas debajo -->
+            <div class="d-flex justify-content-center mt-3">
+              <img src="img/extra/y23/y23.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume20" data-bs-slide-to="0">
+            </div>
+          </div>
+
+          <!-- Texto a la derecha -->
+          <div class="col-md-6">
+            <p><strong>Precio:</strong> $5.500</p>
+            <p>350 ml - <strong>$5.500 - </strong><strong> 2x$10.000</strong></p>
+            <p>Y-23 RECARGA SUSURROS DE BOSQUE</p>
+            <p>Sigue disfrutando de la calidez de Hogar Dulce Hogar con su formato de recarga de Briza Parfums. Su fragancia floral y amaderada envuelve cada rincón en una esencia acogedora, creando un ambiente de serenidad y bienestar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--COLUMNA 6 -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center text-lg-start mt-5">
+  <div class="container p-4">
+    <div class="row">
+      <!-- Sección 1: Logo / Marca -->
+      <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Karoussis Parfums</h5>
+        <p>Perfumes alternativos de calidad, inspirados en las mejores fragancias.</p>
+      </div>
+
+      <!-- Sección 2: Enlaces -->
+      <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Contacto</h5>
+        <p>Gmail: karoussisparfums@gmail.com</p>
+        <p>Teléfono: +56 9 5621 2729</p>
+      </div>
+
+      <!-- Sección 3: Contacto -->
+      <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Métodos de Pago</h5>
+          <div class="d-flex flex-column align-items-start">
+    <!-- Pago en efectivo -->
+            <div class="mb-3 d-flex align-items-center">
+              <img src="img/efectivo.jpg" alt="Pago en efectivo" style="max-width:60px; height:auto;">
+              <span class="ms-2">Efectivo</span>
+            </div>
+    <!-- Pago por transferencia -->
+            <div class="mb-3 d-flex align-items-center">
+              <img src="img/visa.webp" alt="Pago por transferencia" style="max-width:60px; height:auto;">
+              <span class="ms-2">Transferencia bancaria</span>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Derechos reservados -->
+  <div class="text-center p-3 bg-secondary">
+    © Thomas Karoussis - Todos los derechos reservados
+  </div>
+</footer>
+
+</html>

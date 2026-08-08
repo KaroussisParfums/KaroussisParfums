@@ -1,0 +1,51 @@
+/* Ajustes personalizados */
+body {
+  background-color: #f9f9f9;
+}
+
+.navbar-brand img {
+  max-height: 100px; /* aumenta el tamaño máximo */
+  width: auto;       /* mantiene proporción */
+}
+
+.card-title {
+  font-size: 18px;
+}
+
+.text-danger {
+  color: #b12704 !important; /* precio en rojo */
+}
+
+/* Espacio debajo del header */
+body {
+  padding-top: 100px; /* deja espacio para el header fijo */
+}
+
+/* Espacio antes del footer */
+footer {
+  margin-top: 50px;   /* separa el footer del contenido */
+  padding-top: 20px;  /* espacio interno arriba */
+  padding-bottom: 20px; /* espacio interno abajo */
+}
+
+.zoom-img {
+  transition: transform 0.3s ease; /* animación suave */
+}
+
+.zoom-img:hover {
+  transform: scale(1.1); /* agranda un 10% al pasar el mouse */
+}
+
+.zoom-card {
+  transition: transform 0.3s ease;
+  cursor: pointer; /* indica que es clickeable */
+}
+
+.zoom-card:hover {
+  transform: scale(1.05); /* agranda la card al pasar el mouse */
+}
+
+.carousel-item img {
+  max-height: 300px;   /* Ajusta la altura máxima */
+  object-fit: cover;   /* Recorta la imagen para que no se deforme */
+}

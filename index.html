@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karoussis Parfums</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Tu CSS personalizado -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header con Bootstrap -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container-fluid">
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="img/Logo.png" alt="Logo Essenciel" class="img-fluid" style="max-height:100px;">
+      <!-- Icono de la app -->
+      <i class="bi bi-bag-fill ms-2" style="font-size: 1.5rem; color:#333;"></i>
+    </a>
+
+    <!-- Botón responsive -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menú centrado -->
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="phombre.html">Perfumes Hombres</a></li>
+        <li class="nav-item"><a class="nav-link" href="pmujer.html">Perfumes Mujeres</a></li>
+        <li class="nav-item"><a class="nav-link" href="extra.html">Perfumes Extras</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link" href="quienessomos.html">Quienes Somos</a></li>
+      </ul>
+    </div>
+
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="img/Logo.png" alt="Logo Essenciel" class="img-fluid" style="max-height:100px;">
+      <!-- Icono de la app -->
+      <i class="bi bi-bag-fill ms-2" style="font-size: 1.5rem; color:#333;"></i>
+    </a>
+  </div>
+</nav>
+
+<style>
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #fdfdfd;
+      color: #333;
+    }
+    section {
+      padding: 40px;
+      max-width: 900px;
+      margin: auto;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      margin: 10px 0;
+      padding-left: 20px;
+      position: relative;
+    }
+  </style>
+
+<div class="container mt-5 pt-5">
+  <br>
+  <br>
+  <h1 class="text-center">Catálogo</h1>
+</div>
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <!-- Imagen 1 -->
+    <div class="col-md-4 text-center">
+      <a href="pmujer.html">
+        <img src="img/girl.jpg" class="img-fluid rounded zoom-img" alt="Imagen 1">
+      </a>
+    </div>
+
+    <!-- Imagen 2 -->
+    <div class="col-md-4 text-center">
+      <a href="extra.html">
+        <img src="img/extras.png" class="img-fluid rounded zoom-img" alt="Imagen 2">
+      </a>
+    </div>
+
+    <!-- Imagen 3 -->
+    <div class="col-md-4 text-center">
+      <a href="phombre.html">
+        <img src="img/man.jpg" class="img-fluid rounded zoom-img" alt="Imagen 3">
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<div class="container mt-5 pt-5">
+  <br>
+  <br>
+  <h1 class="text-center">Perfumes Parfums d' Parfums Hombre</h1>
+  <p class="card-text">Descubre los perfumes alternativos para hombre de Parfums en Karoussis Parfums. Fragancias de alta calidad, inspiradas en aromas icónicos, frescas e ideales para el día a día.</p>
+</div>
+
+<!--COLUMNA 1 -->
+
+<div class="container mt-3 pt-3">
+  <div class="row">
+
+    <!-- Producto 1 -->
+    <div class="col-md-3 mb-4">
+      <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume1Modal">
+        <img src="img/phombre/h1/h1100ml.webp" class="card-img-top" alt="Parfum H01">
+        <div class="card-body">
+          <h5 class="card-title">Parfums H01</h5>
+          <p class="text-danger fw-bold">$5.500 - $15.500</p>
+          <p class="card-text">Inspirado en Drakkar Noir.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Producto 2 -->
+    <div class="col-md-3 mb-4">
+      <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume2Modal">
+        <img src="img/phombre/h2/h2100ml.webp" class="card-img-top" alt="Parfum H02">
+        <div class="card-body">
+          <h5 class="card-title">Parfums H02</h5>
+          <p class="text-danger fw-bold">$5.500 - $15.500</p>
+          <p class="card-text">Inspirado en Azzaro Pour Homme.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Producto 3 -->
+    <div class="col-md-3 mb-4">
+      <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume3Modal">
+        <img src="img/phombre/h3/h3100ml.webp" class="card-img-top" alt="Parfum H07">
+        <div class="card-body">
+          <h5 class="card-title">Parfums H03</h5>
+          <p class="text-danger fw-bold">$5.500 - $15.500</p>
+          <p class="card-text">Inspirado en Quorum.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Producto 4 -->
+    <div class="col-md-3 mb-4">
+      <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume4Modal">
+        <img src="img/phombre/h4/h4100ml.webp" class="card-img-top" alt="Parfum H09">
+        <div class="card-body">
+          <h5 class="card-title">Parfums H04</h5>
+          <p class="text-danger fw-bold">$5.500 - $15.500</p>
+          <p class="card-text">Inspirado en Paco Rabanne Pour Homme.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Producto 1 -->
+<div class="modal fade" id="perfume1Modal" tabindex="-1" aria-labelledby="perfume1Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <!-- Título -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="perfume1Label">Parfums H01</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <!-- Cuerpo -->
+      <div class="modal-body">
+        <div class="row">
+          <!-- Carrusel a la izquierda -->
+          <div class="col-md-6">
+            <div id="carouselPerfume1" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/phombre/h1/h1100ml.webp" class="d-block w-100" alt="Imagen 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/phombre/h1/h150ml.webp" class="d-block w-100" alt="Imagen 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/phombre/h1/h120ml.webp" class="d-block w-100" alt="Imagen 3">
+                </div>
+              </div>
+              <!-- Controles -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselPerfume1" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselPerfume1" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <!-- Miniaturas debajo -->
+            <div class="d-flex justify-content-center mt-3">
+              <img src="img/phombre/h1/h1100ml.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume1" data-bs-slide-to="0">
+              <img src="img/phombre/h1/h150ml.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume1" data-bs-slide-to="1">
+              <img src="img/phombre/h1/h120ml.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume1" data-bs-slide-to="2">
+            </div>
+          </div>
+
+          <!-- Texto a la derecha -->
+          <div class="col-md-6">
+            <p><strong>Precios:</strong> $5.500 - $15.500</p>
+            <p>100 ml - <strong>$15.500 - </strong><strong> 2x$26.000</strong></p>
+            <p>50 ml - <strong>$10.000 - </strong><strong>2x$18.000</strong></p>
+            <p>20 ml - <strong>$5.500- </strong><strong>2x$10.000</strong></p>
+            <p><strong>Inspiración:</strong> Drakkar Noir</p>
+            <p>Si te gusta Drakkar Noir de Guy Laroche, Parfums H01 será tu nuevo favorito. Este perfume se caracteriza por su familia olfativa Aromática Fougère, ideal para hombres que buscan una fragancia clásica y seductora. Perfecto para uso diario y climas fríos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Producto 2 -->
+<div class="modal fade" id="perfume2Modal" tabindex="-1" aria-labelledby="perfume1Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <!-- Título -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="perfume2Modal">Parfums H02</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <!-- Cuerpo -->
+      <div class="modal-body">
+        <div class="row">
+          <!-- Carrusel a la izquierda -->
+          <div class="col-md-6">
+            <div id="carouselPerfume2" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/phombre/h2/h2100ml.webp" class="d-block w-100" alt="Imagen 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/phombre/h2/h250ml.webp" class="d-block w-100" alt="Imagen 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/phombre/h2/h220ml.webp" class="d-block w-100" alt="Imagen 3">
+                </div>
+              </div>
+              <!-- Controles -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselPerfume2" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselPerfume2" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <!-- Miniaturas debajo -->
+            <div class="d-flex justify-content-center mt-3">
+              <img src="img/phombre/h2/h2100ml.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume2" data-bs-slide-to="0">
+              <img src="img/phombre/h2/h250ml.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume2" data-bs-slide-to="1">
+              <img src="img/phombre/h2/h220ml.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume2" data-bs-slide-to="2">
+            </div>
+          </div>
+
+          <!-- Texto a la derecha -->
+          <div class="col-md-6">
+            <p><strong>Precios:</strong> $5.500 - $15.500</p>
+            <p>100 ml - <strong>$15.500 - </strong><strong> 2x$26.000</strong></p>
+            <p>50 ml - <strong>$10.000 - </strong><strong>2x$18.000</strong></p>
+            <p>20 ml - <strong>$5.500- </strong><strong>2x$10.000</strong></p>
+            <p><strong>Inspiración:</strong> Azzaro Pour Homme</p>
+            <p>Si te gusta Azzaro Pour Homme de Azzaro, Parfums H02 será tu nuevo favorito. Este perfume se caracteriza por su familia olfativa Aromática Fougère, ideal para hombres que buscan una fragancia elegante y atemporal. Perfecto para uso diario y climas cálidos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Producto 3 -->
+<div class="modal fade" id="perfume3Modal" tabindex="-1" aria-labelledby="perfume3Modal" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <!-- Título -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="perfume3Modal">Parfums H03</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <!-- Cuerpo -->
+      <div class="modal-body">
+        <div class="row">
+          <!-- Carrusel a la izquierda -->
+          <div class="col-md-6">
+            <div id="carouselPerfume3" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/phombre/h3/h3100ml.webp" class="d-block w-100" alt="Imagen 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/phombre/h3/h350ml.webp" class="d-block w-100" alt="Imagen 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/phombre/h3/h320ml.webp" class="d-block w-100" alt="Imagen 3">
+                </div>
+              </div>
+              <!-- Controles -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselPerfume3" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselPerfume3" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <!-- Miniaturas debajo -->
+            <div class="d-flex justify-content-center mt-3">
+              <img src="img/phombre/h3/h3100ml.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume3" data-bs-slide-to="0">
+              <img src="img/phombre/h3/h350ml.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume3" data-bs-slide-to="1">
+              <img src="img/phombre/h3/h320ml.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume3" data-bs-slide-to="2">
+            </div>
+          </div>
+
+          <!-- Texto a la derecha -->
+          <div class="col-md-6">
+            <p><strong>Precios:</strong> $5.500 - $15.500</p>
+            <p>100 ml - <strong>$15.500 - </strong><strong> 2x$26.000</strong></p>
+            <p>50 ml - <strong>$10.000 - </strong><strong>2x$18.000</strong></p>
+            <p>20 ml - <strong>$5.500- </strong><strong>2x$10.000</strong></p>
+            <p><strong>Inspiración:</strong> Quorum</p>
+            <p>Si te gusta Quorum de Antonio Puig, Parfums H03 será tu nuevo favorito. Este perfume se caracteriza por su familia olfativa Amaderada Aromática, ideal para hombres que buscan una fragancia intensa y clásica. Perfecto para uso diario y climas frescos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Producto 4 -->
+<div class="modal fade" id="perfume4Modal" tabindex="-1" aria-labelledby="perfume4Modal" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <!-- Título -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="perfume4Modal">Parfums H04</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <!-- Cuerpo -->
+      <div class="modal-body">
+        <div class="row">
+          <!-- Carrusel a la izquierda -->
+          <div class="col-md-6">
+            <div id="carouselPerfume4" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/phombre/h4/h4100ml.webp" class="d-block w-100" alt="Imagen 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/phombre/h4/h450ml.webp" class="d-block w-100" alt="Imagen 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/phombre/h4/h420ml.webp" class="d-block w-100" alt="Imagen 3">
+                </div>
+              </div>
+              <!-- Controles -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselPerfume4" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselPerfume4" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <!-- Miniaturas debajo -->
+            <div class="d-flex justify-content-center mt-3">
+              <img src="img/phombre/h4/h4100ml.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume4" data-bs-slide-to="0">
+              <img src="img/phombre/h4/h450ml.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume4" data-bs-slide-to="1">
+              <img src="img/phombre/h4/h420ml.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume4" data-bs-slide-to="2">
+            </div>
+          </div>
+
+          <!-- Texto a la derecha -->
+          <div class="col-md-6">
+            <p><strong>Precios:</strong> $5.500 - $15.500</p>
+            <p>100 ml - <strong>$15.500 - </strong><strong> 2x$26.000</strong></p>
+            <p>50 ml - <strong>$10.000 - </strong><strong>2x$18.000</strong></p>
+            <p>20 ml - <strong>$5.500- </strong><strong>2x$10.000</strong></p>
+            <p><strong>Inspiración:</strong> Paco Rabanne Pour Homme</p>
+            <p>Si te gusta Paco Rabanne Pour Homme de Paco Rabanne, Parfums H04 será tu nuevo favorito. Este perfume se caracteriza por su familia olfativa Aromática Fougère, ideal para hombres que buscan una fragancia refinada y clásica. Perfecto para uso diario y climas cálidos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="text-center my-4">
+  <a href="phombre.html" class="btn btn-dark btn-lg">Ver más</a>
+</div>
+
+<div class="container mt-5 pt-5">
+  <br>
+  <br>
+  <h1 class="text-center">Perfumes Parfums d' Parfums Mujer</h1>
+  <p class="card-text">Descubre los perfumes alternativos para Mujer de Parfums en Karoussis Parfums. Fragancias de alta calidad, inspiradas en aromas icónicos, frescas e ideales para el día a día.</p>
+</div>
+
+<div class="container mt-3 pt-3">
+  <div class="row">
+
+    <!-- Producto 1 -->
+    <div class="col-md-3 mb-4">
+      <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume1Modal">
+        <img src="img/pmujer/f1/f1100ml.webp" class="card-img-top" alt="Parfum F01">
+        <div class="card-body">
+          <h5 class="card-title">Parfums F01</h5>
+          <p class="text-danger fw-bold">$5.500 - $15.500</p>
+          <p class="card-text">Inspirado en Paloma Picasso.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Producto 2 -->
+    <div class="col-md-3 mb-4">
+      <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume2Modal">
+        <img src="img/pmujer/f2/f2100ml.webp" class="card-img-top" alt="Parfum F02">
+        <div class="card-body">
+          <h5 class="card-title">Parfums F02</h5>
+          <p class="text-danger fw-bold">$5.500 - $15.500</p>
+          <p class="card-text">Inspirado en Poison.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Producto 3 -->
+    <div class="col-md-3 mb-4">
+      <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume3Modal">
+        <img src="img/pmujer/f3/f3100ml.webp" class="card-img-top" alt="Parfum F03">
+        <div class="card-body">
+          <h5 class="card-title">Parfums F03</h5>
+          <p class="text-danger fw-bold">$5.500 - $15.500</p>
+          <p class="card-text">Inspirado en Oscar de la Renta.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Producto 4 -->
+    <div class="col-md-3 mb-4">
+      <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume4Modal">
+        <img src="img/pmujer/f4/f4100ml.webp" class="card-img-top" alt="Parfum F04">
+        <div class="card-body">
+          <h5 class="card-title">Parfums F04</h5>
+          <p class="text-danger fw-bold">$5.500 - $15.500</p>
+          <p class="card-text">Inspirado en Angel.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Producto 1 -->
+<div class="modal fade" id="perfume1Modal" tabindex="-1" aria-labelledby="perfume1Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <!-- Título -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="perfume1Label">Parfums F01</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <!-- Cuerpo -->
+      <div class="modal-body">
+        <div class="row">
+          <!-- Carrusel a la izquierda -->
+          <div class="col-md-6">
+            <div id="carouselPerfume1" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/pmujer/f1/f1100ml.webp" class="d-block w-100" alt="Imagen 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/pmujer/f1/f150ml.webp" class="d-block w-100" alt="Imagen 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/pmujer/f1/f120ml.webp" class="d-block w-100" alt="Imagen 3">
+                </div>
+              </div>
+              <!-- Controles -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselPerfume1" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselPerfume1" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <!-- Miniaturas debajo -->
+            <div class="d-flex justify-content-center mt-3">
+              <img src="img/pmujer/f1/f1100ml.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume1" data-bs-slide-to="0">
+              <img src="img/pmujer/f1/f150ml.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume1" data-bs-slide-to="1">
+              <img src="img/pmujer/f1/f120ml.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume1" data-bs-slide-to="2">
+            </div>
+          </div>
+
+          <!-- Texto a la derecha -->
+          <div class="col-md-6">
+            <p><strong>Precios:</strong> $5.500 - $15.500</p>
+            <p>100 ml - <strong>$15.500 - </strong><strong> 2x$26.000</strong></p>
+            <p>50 ml - <strong>$10.000 - </strong><strong>2x$18.000</strong></p>
+            <p>20 ml - <strong>$5.500- </strong><strong>2x$10.000</strong></p>
+            <p><strong>Inspiración:</strong> Paloma Picasso</p>
+            <p>Si te gusta Paloma Picasso de Paloma Picasso, Parfums F01 será tu nuevo favorito. Este perfume se caracteriza por su familia olfativa Chipre Floral, diseñado para mujeres que buscan una fragancia clásica y elegante. Ideal para uso diario y climas cálidos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Producto 2 -->
+<div class="modal fade" id="perfume2Modal" tabindex="-1" aria-labelledby="perfume2Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <!-- Título -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="perfume2Modal">Parfums F02</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <!-- Cuerpo -->
+      <div class="modal-body">
+        <div class="row">
+          <!-- Carrusel a la izquierda -->
+          <div class="col-md-6">
+            <div id="carouselPerfume2" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/pmujer/f2/f2100ml.webp" class="d-block w-100" alt="Imagen 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/pmujer/f2/f250ml.webp" class="d-block w-100" alt="Imagen 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/pmujer/f2/f220ml.webp" class="d-block w-100" alt="Imagen 3">
+                </div>
+              </div>
+              <!-- Controles -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselPerfume2" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselPerfume2" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <!-- Miniaturas debajo -->
+            <div class="d-flex justify-content-center mt-3">
+              <img src="img/pmujer/f2/f2100ml.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume2" data-bs-slide-to="0">
+              <img src="img/pmujer/f2/f250ml.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume2" data-bs-slide-to="1">
+              <img src="img/pmujer/f2/f220ml.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume2" data-bs-slide-to="2">
+            </div>
+          </div>
+
+          <!-- Texto a la derecha -->
+          <div class="col-md-6">
+            <p><strong>Precios:</strong> $5.500 - $15.500</p>
+            <p>100 ml - <strong>$15.500 - </strong><strong> 2x$26.000</strong></p>
+            <p>50 ml - <strong>$10.000 - </strong><strong>2x$18.000</strong></p>
+            <p>20 ml - <strong>$5.500- </strong><strong>2x$10.000</strong></p>
+            <p><strong>Inspiración:</strong> Poison</p>
+            <p>Si te gusta Poison de Dior, Parfums F02 será tu nuevo favorito. Este perfume se caracteriza por su familia olfativa Oriental Floral, ideal para mujeres que buscan una fragancia misteriosa y seductora. Perfecto para uso nocturno y climas fríos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Producto 3 -->
+<div class="modal fade" id="perfume3Modal" tabindex="-1" aria-labelledby="perfume3Modal" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <!-- Título -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="perfume3Modal">Parfums F03</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <!-- Cuerpo -->
+      <div class="modal-body">
+        <div class="row">
+          <!-- Carrusel a la izquierda -->
+          <div class="col-md-6">
+            <div id="carouselPerfume3" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/pmujer/f3/f3100ml.webp" class="d-block w-100" alt="Imagen 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/pmujer/f3/f350ml.webp" class="d-block w-100" alt="Imagen 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/pmujer/f3/f320ml.webp" class="d-block w-100" alt="Imagen 3">
+                </div>
+              </div>
+              <!-- Controles -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselPerfume3" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselPerfume3" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <!-- Miniaturas debajo -->
+            <div class="d-flex justify-content-center mt-3">
+              <img src="img/pmujer/f3/f3100ml.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume3" data-bs-slide-to="0">
+              <img src="img/pmujer/f3/f350ml.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume3" data-bs-slide-to="1">
+              <img src="img/pmujer/f3/f320ml.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume3" data-bs-slide-to="2">
+            </div>
+          </div>
+
+          <!-- Texto a la derecha -->
+          <div class="col-md-6">
+            <p><strong>Precios:</strong> $5.500 - $15.500</p>
+            <p>100 ml - <strong>$15.500 - </strong><strong> 2x$26.000</strong></p>
+            <p>50 ml - <strong>$10.000 - </strong><strong>2x$18.000</strong></p>
+            <p>20 ml - <strong>$5.500- </strong><strong>2x$10.000</strong></p>
+            <p><strong>Inspiración:</strong> Oscar de la Renta</p>
+            <p>Si te gusta Oscar de Oscar de la Renta, Parfums F03 será tu nuevo favorito. Este perfume se caracteriza por su familia olfativa Oriental Floral, ideal para mujeres que buscan una fragancia clásica y elegante. Perfecto para uso diario y climas cálidos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Producto 4 -->
+<div class="modal fade" id="perfume4Modal" tabindex="-1" aria-labelledby="perfume4Modal" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <!-- Título -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="perfume4Modal">Parfums F04</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <!-- Cuerpo -->
+      <div class="modal-body">
+        <div class="row">
+          <!-- Carrusel a la izquierda -->
+          <div class="col-md-6">
+            <div id="carouselPerfume4" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/pmujer/f4/f4100ml.webp" class="d-block w-100" alt="Imagen 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/pmujer/f4/f450ml.webp" class="d-block w-100" alt="Imagen 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/pmujer/f4/f420ml.webp" class="d-block w-100" alt="Imagen 3">
+                </div>
+              </div>
+              <!-- Controles -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselPerfume4" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselPerfume4" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <!-- Miniaturas debajo -->
+            <div class="d-flex justify-content-center mt-3">
+              <img src="img/pmujer/f4/f4100ml.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume4" data-bs-slide-to="0">
+              <img src="img/pmujer/f4/f450ml.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume4" data-bs-slide-to="1">
+              <img src="img/pmujer/f4/f420ml.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume4" data-bs-slide-to="2">
+            </div>
+          </div>
+
+          <!-- Texto a la derecha -->
+          <div class="col-md-6">
+            <p><strong>Precios:</strong> $5.500 - $15.500</p>
+            <p>100 ml - <strong>$15.500 - </strong><strong> 2x$26.000</strong></p>
+            <p>50 ml - <strong>$10.000 - </strong><strong>2x$18.000</strong></p>
+            <p>20 ml - <strong>$5.500- </strong><strong>2x$10.000</strong></p>
+            <p><strong>Inspiración:</strong> Angel</p>
+            <p>Si te gusta Angel de Mugler, Parfums F04 será tu nuevo favorito. Este perfume se caracteriza por su familia olfativa Oriental Vainilla, ideal para mujeres que buscan una fragancia dulce y envolvente. Perfecto para uso nocturno y climas fríos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="text-center my-4">
+  <a href="pmujer.html" class="btn btn-dark btn-lg">Ver más</a>
+</div>
+
+<div class="container mt-5 pt-5">
+  <br>
+  <br>
+  <h1 class="text-center">Perfumes Extras</h1>
+  <p class="card-text">Descubre los perfumes alternativos en Karoussis Parfums. Fragancias de alta calidad, inspiradas en aromas icónicos, frescas e ideales para el día a día.</p>
+</div>
+
+<!--COLUMNA 1 -->
+
+<div class="container mt-3 pt-3">
+  <div class="row">
+
+    <!-- Producto 1 -->
+    <div class="col-md-3 mb-4">
+      <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume1Modal">
+        <img src="img/extra/b59/b59100ml.webp" class="card-img-top" alt="B-059">
+        <div class="card-body">
+          <h5 class="card-title">B-059</h5>
+          <p class="text-danger fw-bold">$5.500</p>
+          <p class="card-text">B-059 LAVIT CARNAV.59 ROSADO.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Producto 2 -->
+    <div class="col-md-3 mb-4">
+      <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume2Modal">
+        <img src="img/extra/b62/b62100ml.webp" class="card-img-top" alt="PB-062">
+        <div class="card-body">
+          <h5 class="card-title">B-062</h5>
+          <p class="text-danger fw-bold">$5.500</p>
+          <p class="card-text">B-062 LAVIT CARNAV.62 CORAL.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Producto 3 -->
+    <div class="col-md-3 mb-4">
+      <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume3Modal">
+        <img src="img/extra/b68/b68100ml.webp" class="card-img-top" alt="B-068">
+        <div class="card-body">
+          <h5 class="card-title">B-068</h5>
+          <p class="text-danger fw-bold">$5.500</p>
+          <p class="card-text">B-068 LAVIT CARNAV.68 TURQUESA.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Producto 4 -->
+    <div class="col-md-3 mb-4">
+      <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume4Modal">
+        <img src="img/extra/b71/b71100ml.webp" class="card-img-top" alt="B-071">
+        <div class="card-body">
+          <h5 class="card-title">PB-071</h5>
+          <p class="text-danger fw-bold">$5.500</p>
+          <p class="card-text">B-071 LAVIT CARNAV.71 LILA.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Producto 1 -->
+<div class="modal fade" id="perfume1Modal" tabindex="-1" aria-labelledby="perfume1Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <!-- Título -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="perfume1Label">B-059</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <!-- Cuerpo -->
+      <div class="modal-body">
+        <div class="row">
+          <!-- Carrusel a la izquierda -->
+          <div class="col-md-6">
+            <div id="carouselPerfume1" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/extra/b59/b59100ml.webp" class="d-block w-100" alt="Imagen 1">
+                </div>
+              </div>
+            </div>
+
+            <!-- Miniaturas debajo -->
+            <div class="d-flex justify-content-center mt-3">
+              <img src="img/extra/b59/b59100ml.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume1" data-bs-slide-to="0">
+            </div>
+          </div>
+
+          <!-- Texto a la derecha -->
+          <div class="col-md-6">
+            <p><strong>Precio:</strong> $5.500</p>
+            <p>100 ml - <strong>$5.500 - </strong><strong> 2x$10.000</strong></p>
+            <p>B-059 LAVIT CARNAV.59 ROSADO</p>
+            <p>Inspirados en la energía del verano, estos splash corporales combinan aromas dulces, frescos y tropicales que aportan una sensación inmediata de frescura y bienestar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Producto 2 -->
+<div class="modal fade" id="perfume2Modal" tabindex="-1" aria-labelledby="perfume2Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <!-- Título -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="perfume2Modal">B-062</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <!-- Cuerpo -->
+      <div class="modal-body">
+        <div class="row">
+          <!-- Carrusel a la izquierda -->
+          <div class="col-md-6">
+            <div id="carouselPerfume2" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/extra/b62/b62100ml.webp" class="d-block w-100" alt="Imagen 1">
+                </div>
+              </div>
+            </div>
+
+            <!-- Miniaturas debajo -->
+            <div class="d-flex justify-content-center mt-3">
+              <img src="img/extra/b62/b62100ml.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume2" data-bs-slide-to="0">
+            </div>
+          </div>
+
+          <!-- Texto a la derecha -->
+          <div class="col-md-6">
+            <p><strong>Precio:</strong> $5.500</p>
+            <p>100 ml - <strong>$5.500 - </strong><strong> 2x$10.000</strong></p>
+            <p>B-062 LAVIT CARNAV.62 CORAL</p>
+            <p>Inspirados en la energía del verano, estos splash corporales combinan aromas dulces, frescos y tropicales que aportan una sensación inmediata de frescura y bienestar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Producto 3 -->
+<div class="modal fade" id="perfume3Modal" tabindex="-1" aria-labelledby="perfume3Modal" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <!-- Título -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="perfume3Modal">B-068</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <!-- Cuerpo -->
+      <div class="modal-body">
+        <div class="row">
+          <!-- Carrusel a la izquierda -->
+          <div class="col-md-6">
+            <div id="carouselPerfume3" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/extra/b68/b68100ml.webp" class="d-block w-100" alt="Imagen 1">
+                </div>
+              </div>
+            </div>
+
+            <!-- Miniaturas debajo -->
+            <div class="d-flex justify-content-center mt-3">
+              <img src="img/extra/b68/b68100ml.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume3" data-bs-slide-to="0">
+            </div>
+          </div>
+
+          <!-- Texto a la derecha -->
+          <div class="col-md-6">
+            <p><strong>Precio:</strong> $5.500</p>
+            <p>100 ml - <strong>$5.500 - </strong><strong> 2x$10.000</strong></p>
+            <p>B-068 LAVIT CARNAV.68 TURQUESA</p>
+            <p>Inspirados en la energía del verano, estos splash corporales combinan aromas dulces, frescos y tropicales que aportan una sensación inmediata de frescura y bienestar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Producto 4 -->
+<div class="modal fade" id="perfume4Modal" tabindex="-1" aria-labelledby="perfume4Modal" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <!-- Título -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="perfume4Modal">B-071</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <!-- Cuerpo -->
+      <div class="modal-body">
+        <div class="row">
+          <!-- Carrusel a la izquierda -->
+          <div class="col-md-6">
+            <div id="carouselPerfume4" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/extra/b71/b71100ml.webp" class="d-block w-100" alt="Imagen 1">
+                </div>
+              </div>
+            </div>
+
+            <!-- Miniaturas debajo -->
+            <div class="d-flex justify-content-center mt-3">
+              <img src="img/extra/b71/b71100ml.webp" class="img-thumbnail mx-1" style="width:60px; cursor:pointer;" data-bs-target="#carouselPerfume4" data-bs-slide-to="0">
+            </div>
+          </div>
+
+          <!-- Texto a la derecha -->
+          <div class="col-md-6">
+            <p><strong>Precio:</strong> $5.500</p>
+            <p>100 ml - <strong>$5.500 - </strong><strong> 2x$10.000</strong></p>
+            <p>B-071 LAVIT CARNAV.71 LILA</p>
+            <p>Inspirados en la energía del verano, estos splash corporales combinan aromas dulces, frescos y tropicales que aportan una sensación inmediata de frescura y bienestar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="text-center my-4">
+  <a href="extra.html" class="btn btn-dark btn-lg">Ver más</a>
+</div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center text-lg-start mt-5">
+  <div class="container p-4">
+    <div class="row">
+      <!-- Sección 1: Logo / Marca -->
+      <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Karoussis Parfums</h5>
+        <p>Perfumes alternativos de calidad, inspirados en las mejores fragancias.</p>
+      </div>
+
+      <!-- Sección 2: Enlaces -->
+      <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Contacto</h5>
+        <p>Gmail: karoussisparfums@gmail.com</p>
+        <p>Teléfono: +56 9 5621 2729</p>
+      </div>
+
+      <!-- Sección 3: Contacto -->
+      <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Métodos de Pago</h5>
+          <div class="d-flex flex-column align-items-start">
+    <!-- Pago en efectivo -->
+            <div class="mb-3 d-flex align-items-center">
+              <img src="img/efectivo.jpg" alt="Pago en efectivo" style="max-width:60px; height:auto;">
+              <span class="ms-2">Efectivo</span>
+            </div>
+    <!-- Pago por transferencia -->
+            <div class="mb-3 d-flex align-items-center">
+              <img src="img/visa.webp" alt="Pago por transferencia" style="max-width:60px; height:auto;">
+              <span class="ms-2">Transferencia bancaria</span>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Derechos reservados -->
+  <div class="text-center p-3 bg-secondary">
+    © Thomas Karoussis - Todos los derechos reservados
+  </div>
+</footer>
+
+</html>
