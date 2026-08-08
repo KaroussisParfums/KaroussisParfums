@@ -97,40 +97,60 @@
 
 <script>
 const searchInput = document.getElementById("searchInput");
+const parentRow = document.querySelector(".row");
 
-searchInput.addEventListener("keyup", function() {
+function restoreOriginalOrder() {
+  const children = Array.from(parentRow.children);
+  children.sort((a, b) => {
+    return parseInt(a.dataset.order, 10) - parseInt(b.dataset.order, 10);
+  });
+  parentRow.innerHTML = "";
+  children.forEach(ch => parentRow.appendChild(ch));
+}
+
+searchInput.addEventListener("keyup", function(e) {
   let filter = searchInput.value.toLowerCase();
   let cards = Array.from(document.querySelectorAll(".card"));
-  let parentRow = document.querySelector(".row"); // contenedor principal de productos
 
   if (filter === "") {
-    // Restaurar visibilidad original
     cards.forEach(card => card.style.display = "");
+    restoreOriginalOrder();
     return;
   }
 
-  // Filtrar coincidencias
   let matches = cards.filter(card => card.innerText.toLowerCase().includes(filter));
 
-  // Ordenar alfabéticamente por título
   matches.sort((a, b) => {
     let titleA = a.querySelector(".card-title").innerText.toLowerCase();
     let titleB = b.querySelector(".card-title").innerText.toLowerCase();
     return titleA.localeCompare(titleB);
   });
 
-  // Ocultar todas
   cards.forEach(card => card.style.display = "none");
 
-  // Mostrar coincidencias y reordenarlas al inicio
   matches.forEach(card => {
     card.style.display = "";
     parentRow.insertBefore(card.parentElement, parentRow.firstChild);
   });
 });
 
+searchInput.addEventListener("input", function() {
+  if (searchInput.value === "") {
+    restoreOriginalOrder();
+  }
+});
 
+document.addEventListener("keydown", function(e) {
+  if (e.key === "Escape") {
+    searchInput.value = "";
+    restoreOriginalOrder();
+  }
+});
 </script>
+
+
+
+
 
 <!--COLUMNA 1 -->
 
@@ -138,7 +158,7 @@ searchInput.addEventListener("keyup", function() {
   <div class="row">
 
     <!-- Producto 1 -->
-    <div class="col-md-3 mb-4">
+    <div class="col-md-3 mb-4" data-order="1">
       <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume1Modal">
         <img src="img/extra/b59/b59100ml.webp" class="card-img-top" alt="B-059">
         <div class="card-body">
@@ -150,7 +170,7 @@ searchInput.addEventListener("keyup", function() {
     </div>
 
     <!-- Producto 2 -->
-    <div class="col-md-3 mb-4">
+    <div class="col-md-3 mb-4" data-order="2">
       <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume2Modal">
         <img src="img/extra/b62/b62100ml.webp" class="card-img-top" alt="PB-062">
         <div class="card-body">
@@ -162,7 +182,7 @@ searchInput.addEventListener("keyup", function() {
     </div>
 
     <!-- Producto 3 -->
-    <div class="col-md-3 mb-4">
+    <div class="col-md-3 mb-4" data-order="3">
       <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume3Modal">
         <img src="img/extra/b68/b68100ml.webp" class="card-img-top" alt="B-068">
         <div class="card-body">
@@ -174,11 +194,11 @@ searchInput.addEventListener("keyup", function() {
     </div>
 
     <!-- Producto 4 -->
-    <div class="col-md-3 mb-4">
+    <div class="col-md-3 mb-4" data-order="4">
       <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume4Modal">
         <img src="img/extra/b71/b71100ml.webp" class="card-img-top" alt="B-071">
         <div class="card-body">
-          <h5 class="card-title">PB-071</h5>
+          <h5 class="card-title">B-071</h5>
           <p class="text-danger fw-bold">$5.500</p>
           <p class="card-text">B-071 LAVIT CARNAV.71 LILA.</p>
         </div>
@@ -361,7 +381,7 @@ searchInput.addEventListener("keyup", function() {
   <div class="row">
 
     <!-- Producto 5 -->
-    <div class="col-md-3 mb-4">
+    <div class="col-md-3 mb-4" data-order="5">
       <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume5Modal">
         <img src="img/extra/b76/b76100ml.webp" class="card-img-top" alt="B-076">
         <div class="card-body">
@@ -373,7 +393,7 @@ searchInput.addEventListener("keyup", function() {
     </div>
 
     <!-- Producto 6 -->
-    <div class="col-md-3 mb-4">
+    <div class="col-md-3 mb-4" data-order="6">
       <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume6Modal">
         <img src="img/extra/b102/b102210ml.webp" class="card-img-top" alt="B-102">
         <div class="card-body">
@@ -385,7 +405,7 @@ searchInput.addEventListener("keyup", function() {
     </div>
 
     <!-- Producto 7 -->
-    <div class="col-md-3 mb-4">
+    <div class="col-md-3 mb-4" data-order="7">
       <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume7Modal">
         <img src="img/extra/b103/b103210ml.webp" class="card-img-top" alt="B-103">
         <div class="card-body">
@@ -397,7 +417,7 @@ searchInput.addEventListener("keyup", function() {
     </div>
 
     <!-- Producto 8 -->
-    <div class="col-md-3 mb-4">
+    <div class="col-md-3 mb-4" data-order="8">
       <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume8Modal">
         <img src="img/extra/b104/b104210ml.webp" class="card-img-top" alt="B-104">
         <div class="card-body">
@@ -584,7 +604,7 @@ searchInput.addEventListener("keyup", function() {
   <div class="row">
 
     <!-- Producto 9 -->
-    <div class="col-md-3 mb-4">
+    <div class="col-md-3 mb-4" data-order="9">
       <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume9Modal">
         <img src="img/extra/b105/b105210ml.webp" class="card-img-top" alt="B-105">
         <div class="card-body">
@@ -596,7 +616,7 @@ searchInput.addEventListener("keyup", function() {
     </div>
 
     <!-- Producto 10 -->
-    <div class="col-md-3 mb-4">
+    <div class="col-md-3 mb-4" data-order="10">
       <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume10Modal">
         <img src="img/extra/b106/b106210ml.webp" class="card-img-top" alt="B-106">
         <div class="card-body">
@@ -608,7 +628,7 @@ searchInput.addEventListener("keyup", function() {
     </div>
 
     <!-- Producto 11 -->
-    <div class="col-md-3 mb-4">
+    <div class="col-md-3 mb-4" data-order="11">
       <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume11Modal">
         <img src="img/extra/b107/b107210ml.webp" class="card-img-top" alt="B-107">
         <div class="card-body">
@@ -620,7 +640,7 @@ searchInput.addEventListener("keyup", function() {
     </div>
 
     <!-- Producto 12 -->
-    <div class="col-md-3 mb-4">
+    <div class="col-md-3 mb-4" data-order="12">
       <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume12Modal">
         <img src="img/extra/y01/y1.webp" class="card-img-top" alt="Parfum F12">
         <div class="card-body">
@@ -807,7 +827,7 @@ searchInput.addEventListener("keyup", function() {
   <div class="row">
 
     <!-- Producto 13 -->
-    <div class="col-md-3 mb-4">
+    <div class="col-md-3 mb-4" data-order="13">
       <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume13Modal">
         <img src="img/extra/y02/y2.webp" class="card-img-top" alt="Y-02">
         <div class="card-body">
@@ -819,7 +839,7 @@ searchInput.addEventListener("keyup", function() {
     </div>
 
     <!-- Producto 14 -->
-    <div class="col-md-3 mb-4">
+    <div class="col-md-3 mb-4" data-order="14">
       <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume14Modal">
         <img src="img/extra/y03/y3.webp" class="card-img-top" alt="Y-03">
         <div class="card-body">
@@ -831,7 +851,7 @@ searchInput.addEventListener("keyup", function() {
     </div>
 
     <!-- Producto 15 -->
-    <div class="col-md-3 mb-4">
+    <div class="col-md-3 mb-4" data-order="15">
       <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume15Modal">
         <img src="img/extra/y11/y11.webp" class="card-img-top" alt="Y-11">
         <div class="card-body">
@@ -843,7 +863,7 @@ searchInput.addEventListener("keyup", function() {
     </div>
 
     <!-- Producto 16 -->
-    <div class="col-md-3 mb-4">
+    <div class="col-md-3 mb-4" data-order="16">
       <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume16Modal">
         <img src="img/extra/y12/y12.webp" class="card-img-top" alt="Y-12">
         <div class="card-body">
@@ -904,7 +924,7 @@ searchInput.addEventListener("keyup", function() {
     <div class="modal-content">
       <!-- Título -->
       <div class="modal-header">
-        <h5 class="modal-title" id="perfume14Modal">PY-03</h5>
+        <h5 class="modal-title" id="perfume14Modal">Y-03</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
 
@@ -1030,7 +1050,7 @@ searchInput.addEventListener("keyup", function() {
   <div class="row">
 
     <!-- Producto 17 -->
-    <div class="col-md-3 mb-4">
+    <div class="col-md-3 mb-4" data-order="17">
       <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume17Modal">
         <img src="img/extra/y13/y13.webp" class="card-img-top" alt="Y-13">
         <div class="card-body">
@@ -1042,7 +1062,7 @@ searchInput.addEventListener("keyup", function() {
     </div>
 
     <!-- Producto 18 -->
-    <div class="col-md-3 mb-4">
+    <div class="col-md-3 mb-4" data-order="18">
       <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume18Modal">
         <img src="img/extra/y21/y21.webp" class="card-img-top" alt="Y-21">
         <div class="card-body">
@@ -1054,7 +1074,7 @@ searchInput.addEventListener("keyup", function() {
     </div>
 
     <!-- Producto 19 -->
-    <div class="col-md-3 mb-4">
+    <div class="col-md-3 mb-4" data-order="19">
       <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume19Modal">
         <img src="img/extra/y22/y22.webp" class="card-img-top" alt="Y-22">
         <div class="card-body">
@@ -1066,7 +1086,7 @@ searchInput.addEventListener("keyup", function() {
     </div>
 
     <!-- Producto 20 -->
-    <div class="col-md-3 mb-4">
+    <div class="col-md-3 mb-4" data-order="20">
       <div class="card text-center h-100 zoom-card" data-bs-toggle="modal" data-bs-target="#perfume20Modal">
         <img src="img/extra/y23/y23.webp" class="card-img-top" alt="Y-23">
         <div class="card-body">

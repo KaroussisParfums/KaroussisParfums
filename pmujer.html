@@ -97,7 +97,17 @@
 
 <script>
 const searchInput = document.getElementById("searchInput");
+const parentRow = document.querySelector(".row");
+const cards = Array.from(document.querySelectorAll(".card"));
 
+// 🔹 Función para extraer el número de "Parfums Hxx"
+function getParfumNumber(card) {
+  let title = card.querySelector(".card-title").innerText;
+  let match = title.match(/F(\d+)/i);
+  return match ? parseInt(match[1], 10) : 9999; // si no hay número, lo manda al final
+}
+
+// 🔹 Tu código actual (queda intacto)
 searchInput.addEventListener("keyup", function() {
   let filter = searchInput.value.toLowerCase();
   let cards = Array.from(document.querySelectorAll(".card"));
@@ -106,6 +116,10 @@ searchInput.addEventListener("keyup", function() {
   if (filter === "") {
     // Restaurar visibilidad original
     cards.forEach(card => card.style.display = "");
+    // 🔹 Agregado: ordenar por número Hxx y reconstruir
+    let sorted = cards.sort((a, b) => getParfumNumber(a) - getParfumNumber(b));
+    parentRow.innerHTML = "";
+    sorted.forEach(card => parentRow.appendChild(card.parentElement));
     return;
   }
 
@@ -129,8 +143,16 @@ searchInput.addEventListener("keyup", function() {
   });
 });
 
-
+// 🔹 EXTRA: escuchar el evento "input" (cuando borras con la X)
+searchInput.addEventListener("input", function() {
+  if (searchInput.value === "") {
+    let sorted = cards.sort((a, b) => getParfumNumber(a) - getParfumNumber(b));
+    parentRow.innerHTML = "";
+    sorted.forEach(card => parentRow.appendChild(card.parentElement));
+  }
+});
 </script>
+
 
 <!--COLUMNA 1 -->
 
